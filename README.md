@@ -177,9 +177,52 @@ We welcome contributions! To contribute:
 - **Phone**: +213 000 000 000
 - **Address**: Algeria - Tindouf Province
 
-## 📝 License
+## 📝 **Academic Project License - Decree 1275**
 
-This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+This project is a **graduation thesis project for a Bachelor's degree (Licence)** and is eligible to participate as a **Startup project** in accordance with Algerian **Joint Ministerial Decree No. 1275** of September 27, 2022, which defines the procedures for granting the status of a startup or innovative project.
+
+### 📌 **Project Academic Information:**
+| | |
+|---|---|
+| **Project Type** | Graduation Thesis (Licence Level) |
+| **Academic Level** | Third Year Licence |
+| **Field of Study** | Computer Science / Web Development |
+| **Academic Institution** | [University Name Here] |
+| **Academic Year** | 2025-2026 |
+
+### 🎯 **Compliance with Decree 1275 Criteria:**
+
+| Criterion | Project Compliance |
+|-----------|-------------------|
+| **Innovation & Originality** | ✅ Hybrid education platform combining in-person and digital learning |
+| **Scalability** | ✅ Designed for growth and expansion |
+| **Economic Viability** | ✅ Clear business model with subscription plans |
+| **Technological Integration** | ✅ Modern technologies (Bootstrap 5, Font Awesome, AOS) |
+| **Social Impact** | ✅ Improves education quality and reduces digital divide |
+
+### 📄 **About Decree 1275:**
+
+> According to the joint ministerial decree of September 27, 2022, which defines the procedures for granting startup status or innovative project status, this project meets the following criteria:
+> - Innovation and originality
+> - Scalability and growth potential
+> - Economic viability
+> - Use of modern technology
+> - Social impact
+
+### ⚖️ **Academic Use License:**
+
+This project is created for **academic purposes** as part of a graduation thesis. It is intended to be submitted for **startup project competitions** in accordance with Algerian law.
+
+```
+Copyright (c) 2025-2026 [Your Name]
+
+This project is developed as an academic work and is protected under Algerian copyright law. 
+It may be used for educational and startup competition purposes according to Decree 1275.
+```
+
+---
+
+*This project is an academic work intended for participation in startup competitions as per Algerian Decree 1275.*
 
 ## 👏 Acknowledgments
 
