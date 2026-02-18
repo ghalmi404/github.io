@@ -1,9 +1,5 @@
 # Al-Amal School Support Institution 🏫📚
 
-
-## 🌐 **رابط الموقع المباشر**
-🔗 **[https://ghalmi404.github.io/github.io/](https://ghalmi404.github.io/github.io/)**
-
 ## 📋 Overview
 An integrated educational platform that combines **in-person and digital education** in one place, aimed at providing exceptional academic support for students at all educational levels with individual follow-up and guaranteed results.
 
@@ -74,7 +70,7 @@ Al-Amal_Institution/
 ├── 📄 contact.html                     # Contact page
 ├── 📄 forgot-password.html             # Forgot password page
 │
-├── 📁 Student/                         # Student pages
+├── 📁 student/                         # Student pages
 │   ├── student-dashboard.html
 │   ├── student-profile.html
 │   ├── my-courses.html
@@ -87,7 +83,7 @@ Al-Amal_Institution/
 │   ├── messages.html
 │   └── subscription.html
 │
-├── 📁 Teacher/                         # Teacher pages
+├── 📁 teacher/                         # Teacher pages
 │   ├── teacher-dashboard.html
 │   ├── teacher-profile.html
 │   ├── manage-courses.html
@@ -97,7 +93,7 @@ Al-Amal_Institution/
 │   ├── student-list.html
 │   └── teacher-messages.html
 │
-└── 📁 Admin/                           # Admin pages
+└── 📁 admin/                           # Admin pages
     ├── admin-dashboard.html
     ├── manage-students.html
     ├── manage-teachers.html
@@ -154,15 +150,15 @@ cd github.io
 
 ### 🟢 Student Dashboard
 - **Path:** `Student/student-dashboard.html`
-- **Live:** [Student Dashboard](https://ghalmi404.github.io/github.io/Student/student-dashboard.html)
+- **Live:** [Student Dashboard](https://ghalmi404.github.io/github.io/student/student-dashboard.html)
 
 ### 🔵 Teacher Dashboard
 - **Path:** `Teacher/teacher-dashboard.html`
-- **Live:** [Teacher Dashboard](https://ghalmi404.github.io/github.io/Teacher/teacher-dashboard.html)
+- **Live:** [Teacher Dashboard](https://ghalmi404.github.io/github.io/teacher/teacher-dashboard.html)
 
 ### 🔴 Admin Dashboard
 - **Path:** `Admin/admin-dashboard.html`
-- **Live:** [Admin Dashboard](https://ghalmi404.github.io/github.io/Admin/admin-dashboard.html)
+- **Live:** [Admin Dashboard](https://ghalmi404.github.io/github.io/admin/admin-dashboard.html)
 
 ## 🤝 Contributing
 
@@ -177,8 +173,8 @@ We welcome contributions! To contribute:
 ## 📞 Contact
 
 - **Website**: [https://ghalmi404.github.io/github.io/](https://ghalmi404.github.io/github.io/)
-- **Email**: contact@alamel.dz
-- **Phone**: +213 550 12 34 56
+- **Email**: example@gmail.com
+- **Phone**: +213 000 000 000
 - **Address**: Algeria - Tindouf Province
 
 ## 📝 License
@@ -197,5 +193,3 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 **Al-Amal School Support Institution - Your Trust is Our Responsibility** 💙
 
 **[🔗 Visit Live Site: https://ghalmi404.github.io/github.io/](https://ghalmi404.github.io/github.io/)**
-
-![Footer](https://via.placeholder.com/1200x100/1A4B7A/FFFFFF?text=Al-Amal+School+Support+Institution+-+Your+Trust+is+Our+Responsibility)
