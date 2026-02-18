@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرسائل - مؤسسة الأمل</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="../index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="../logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="teacher-profile.html">
+                        <i class="fas fa-user"></i>
+                        <span>أ. محمد</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="alamel-dashboard">
+        <div class="container">
+            <div class="row">
+                 <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="alamel-dashboard-sidebar">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3 class="user-name">محمد عبدالله</h3>
+                            <span class="user-level">أستاذ الرياضيات</span>
+                        </div>
+                        
+                        <ul class="alamel-dashboard-menu">
+                            <li><a href="teacher-dashboard.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                            <li><a href="teacher-profile.html"><i class="fas fa-user"></i> الملف الشخصي</a></li>
+                            <li><a href="manage-courses.html"><i class="fas fa-book"></i> إدارة الدورات</a></li>
+                            <li><a href="upload-lesson.html"><i class="fas fa-upload"></i> رفع درس</a></li>
+                            <li><a href="create-quiz.html"><i class="fas fa-question-circle"></i> إنشاء اختبار</a></li>
+                            <li><a href="student-list.html"><i class="fas fa-users"></i> قائمة الطلاب</a></li>
+                            <li><a href="teacher-messages.html" class="active"><i class="fas fa-envelope"></i> الرسائل</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                
+                <div class="col-lg-9">
+                    <div class="alamel-dashboard-main">
+                        <div class="alamel-dashboard-header">
+                            <h1 class="alamel-dashboard-title">الرسائل</h1>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newMessageModal">
+                                <i class="fas fa-plus"></i> رسالة جديدة
+                            </button>
+                        </div>
+                        
+                        <!-- Message Tabs -->
+                        <ul class="nav nav-tabs mb-4" id="messageTabs">
+                            <li class="nav-item">
+                                <a class="nav-link active" data-bs-toggle="tab" href="#inbox">صندوق الوارد</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#sent">الرسائل المرسلة</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" data-bs-toggle="tab" href="#important">مهمة</a>
+                            </li>
+                        </ul>
+                        
+                        <!-- Tab Content -->
+                        <div class="tab-content">
+                            <!-- Inbox -->
+                            <div class="tab-pane fade show active" id="inbox">
+                                <ul class="alamel-message-list">
+                                    <li class="alamel-message-item unread">
+                                        <div class="alamel-message-avatar">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                        <div class="alamel-message-content">
+                                            <div class="alamel-message-header">
+                                                <span class="alamel-message-sender">أحمد محمد (ولي أمر)</span>
+                                                <span class="alamel-message-time">منذ 5 دقائق</span>
+                                            </div>
+                                            <div class="alamel-message-title">استفسار حول نتيجة الاختبار</div>
+                                            <div class="alamel-message-preview">السلام عليكم أستاذ محمد، أود الاستفسار عن نتيجة اختبار ابني...</div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="alamel-message-item unread">
+                                        <div class="alamel-message-avatar" style="background: var(--gradient-secondary);">
+                                            <i class="fas fa-user-tie"></i>
+                                        </div>
+                                        <div class="alamel-message-content">
+                                            <div class="alamel-message-header">
+                                                <span class="alamel-message-sender">إدارة المؤسسة</span>
+                                                <span class="alamel-message-time">منذ ساعة</span>
+                                            </div>
+                                            <div class="alamel-message-title">اجتماع هيئة التدريس</div>
+                                            <div class="alamel-message-preview">ندعوكم لحضور اجتماع هيئة التدريس غداً الساعة 10 صباحاً...</div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="alamel-message-item">
+                                        <div class="alamel-message-avatar" style="background: linear-gradient(135deg, #E67E22, #F39C12);">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                        <div class="alamel-message-content">
+                                            <div class="alamel-message-header">
+                                                <span class="alamel-message-sender">فاطمة الزهراء (طالبة)</span>
+                                                <span class="alamel-message-time">الأمس</span>
+                                            </div>
+                                            <div class="alamel-message-title">طلب مساعدة في المعادلات</div>
+                                            <div class="alamel-message-preview">أستاذ، لدي صعوبة في فهم درس المعادلات، هل يمكنك مساعدتي؟</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Sent -->
+                            <div class="tab-pane fade" id="sent">
+                                <ul class="alamel-message-list">
+                                    <li class="alamel-message-item">
+                                        <div class="alamel-message-avatar">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                        <div class="alamel-message-content">
+                                            <div class="alamel-message-header">
+                                                <span class="alamel-message-sender">إلى: طلاب السنة الثانية</span>
+                                                <span class="alamel-message-time">10:30 صباحاً</span>
+                                            </div>
+                                            <div class="alamel-message-title">تذكير بواجب الرياضيات</div>
+                                            <div class="alamel-message-preview">تم إضافة واجب جديد على المنصة، يرجى تسليمه قبل...</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <!-- Important -->
+                            <div class="tab-pane fade" id="important">
+                                <ul class="alamel-message-list">
+                                    <li class="alamel-message-item">
+                                        <div class="alamel-message-avatar">
+                                            <i class="fas fa-star" style="color: var(--warning-color);"></i>
+                                        </div>
+                                        <div class="alamel-message-content">
+                                            <div class="alamel-message-header">
+                                                <span class="alamel-message-sender">إدارة المؤسسة</span>
+                                                <span class="alamel-message-time">20 فبراير</span>
+                                            </div>
+                                            <div class="alamel-message-title">عقد الفصل الثاني</div>
+                                            <div class="alamel-message-preview">يرجى الاطلاع على عقد الفصل الثاني والتوقيع عليه...</div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- New Message Modal -->
+    <div class="modal fade" id="newMessageModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">رسالة جديدة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="alamel-form-group">
+                            <label class="alamel-form-label">إلى</label>
+                            <select class="alamel-form-control">
+                                <option>جميع طلاب السنة الثانية</option>
+                                <option>جميع طلاب السنة الثالثة</option>
+                                <option>تحديد طالب...</option>
+                            </select>
+                        </div>
+                        <div class="alamel-form-group">
+                            <label class="alamel-form-label">عنوان الرسالة</label>
+                            <input type="text" class="alamel-form-control" placeholder="أدخل عنوان الرسالة">
+                        </div>
+                        <div class="alamel-form-group">
+                            <label class="alamel-form-label">نص الرسالة</label>
+                            <textarea class="alamel-form-control" rows="5" placeholder="اكتب رسالتك هنا..."></textarea>
+                        </div>
+                        <div class="alamel-form-group">
+                            <label class="alamel-form-label">مرفقات</label>
+                            <input type="file" class="alamel-form-control">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary">إرسال</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

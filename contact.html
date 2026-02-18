@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - مؤسسة الأمل للدعم المدرسي</title>
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Additional CSS for Contact Page -->
+    <style>
+        .alamel-contact-info {
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .alamel-contact-info::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+        
+        .alamel-contact-info::after {
+            content: '';
+            position: absolute;
+            bottom: -50%;
+            left: -20%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+        }
+        
+        .alamel-contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .alamel-contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            backdrop-filter: blur(5px);
+        }
+        
+        .alamel-contact-text {
+            flex: 1;
+        }
+        
+        .alamel-contact-text h4 {
+            color: white;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+        }
+        
+        .alamel-contact-text p {
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+        
+        .alamel-contact-text a {
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .alamel-contact-text a:hover {
+            color: var(--warning-color);
+        }
+        
+        .alamel-map {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            margin-top: 2rem;
+            box-shadow: var(--shadow-md);
+        }
+        
+        .alamel-map iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+        }
+        
+        .alamel-working-hours {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--shadow-sm);
+            margin-top: 2rem;
+        }
+        
+        .alamel-working-hours h4 {
+            color: var(--primary-color);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .alamel-hours-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .alamel-hours-item:last-child {
+            border-bottom: none;
+        }
+        
+        .alamel-hours-day {
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        
+        .alamel-hours-time {
+            color: var(--text-muted);
+        }
+        
+        .alamel-hours-note {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+        
+        .alamel-social-contact {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+        
+        .alamel-social-contact a {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+        
+        .alamel-social-contact a:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+        
+        .alamel-success-message {
+            display: none;
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 1rem;
+            border-radius: 50px;
+            text-align: center;
+            margin-top: 1rem;
+            animation: slideUp 0.5s ease;
+        }
+        
+        .alamel-success-message.show {
+            display: block;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        textarea.alamel-form-control {
+            height: 120px;
+            resize: none;
+        }
+        
+        .alamel-required::after {
+            content: '*';
+            color: #dc3545;
+            margin-right: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="contact.html">
+                        <i class="fas fa-envelope"></i>
+                        <span>اتصل بنا</span>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="login.html">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>دخول</span>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link alamel-btn-outline" href="register.html">
+                        <i class="fas fa-user-plus"></i>
+                        <span>حساب جديد</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Contact Hero Section -->
+    <section class="alamel-hero" style="min-height: auto; padding: 100px 0;">
+        <div class="container">
+            <div class="alamel-hero-content" data-aos="fade-up">
+                <h1 class="alamel-hero-title">تواصل معنا</h1>
+                <p class="alamel-hero-subtitle">نحن هنا للإجابة عن جميع استفساراتكم على مدار الساعة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="alamel-section bg-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-left">
+                    <div class="alamel-contact-info">
+                        <h2 style="color: white; font-size: 1.8rem; margin-bottom: 2rem; position: relative; z-index: 1;">معلومات الاتصال</h2>
+                        
+                        <div class="alamel-contact-item">
+                            <div class="alamel-contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="alamel-contact-text">
+                                <h4>العنوان</h4>
+                                <p>الجزائر - ولاية تندوف - حي السلام</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alamel-contact-item">
+                            <div class="alamel-contact-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="alamel-contact-text">
+                                <h4>رقم الهاتف</h4>
+                                <p><a href="tel:+213 000 000 000">+213 000 000 000</a></p>
+                                <p><a href="tel:+213 000 000 000">+213 000 000 000</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="alamel-contact-item">
+                            <div class="alamel-contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="alamel-contact-text">
+                                <h4>البريد الإلكتروني</h4>
+                                <p><a href="mailto:info@alamel.dz">info@alamel.dz</a></p>
+                                <p><a href="mailto:support@alamel.dz">support@alamel.dz</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="alamel-contact-item">
+                            <div class="alamel-contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="alamel-contact-text">
+                                <h4>ساعات العمل</h4>
+                                <p>السبت - الخميس: 9:00 صباحاً - 8:00 مساءً</p>
+                                <p>الجمعة: مغلق</p>
+                            </div>
+                        </div>
+                        
+                        <div class="alamel-social-contact">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-7" data-aos="fade-right">
+                    <div class="alamel-form-card" style="padding: 2.5rem;">
+                        <div class="alamel-form-header">
+                            <h2 class="alamel-form-title">أرسل لنا رسالة</h2>
+                            <p class="alamel-form-subtitle">سنتواصل معك في أقرب وقت ممكن</p>
+                        </div>
+                        
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label alamel-required">الاسم الكامل</label>
+                                        <input type="text" class="alamel-form-control" placeholder="أدخل اسمك الكامل" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label alamel-required">البريد الإلكتروني</label>
+                                        <input type="email" class="alamel-form-control" placeholder="أدخل بريدك الإلكتروني" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">رقم الهاتف</label>
+                                        <input type="tel" class="alamel-form-control" placeholder="أدخل رقم الهاتف">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label alamel-required">نوع الاستفسار</label>
+                                        <select class="alamel-form-control" required>
+                                            <option value="">اختر نوع الاستفسار</option>
+                                            <option value="general">استفسار عام</option>
+                                            <option value="registration">مشكلة في التسجيل</option>
+                                            <option value="payment">مشكلة في الدفع</option>
+                                            <option value="technical">مشكلة تقنية</option>
+                                            <option value="suggestion">اقتراح</option>
+                                            <option value="complaint">شكوى</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="alamel-form-group">
+                                <label class="alamel-form-label alamel-required">عنوان الرسالة</label>
+                                <input type="text" class="alamel-form-control" placeholder="أدخل عنوان الرسالة" required>
+                            </div>
+                            
+                            <div class="alamel-form-group">
+                                <label class="alamel-form-label alamel-required">الرسالة</label>
+                                <textarea class="alamel-form-control" placeholder="اكتب رسالتك هنا..." required></textarea>
+                            </div>
+                            
+                            <div class="alamel-form-check">
+                                <input type="checkbox" class="alamel-form-check-input" id="contactCopy" checked>
+                                <label class="alamel-form-check-label" for="contactCopy">
+                                    أرسل لي نسخة من الرسالة
+                                </label>
+                            </div>
+                            
+                            <button type="submit" class="alamel-form-btn">إرسال الرسالة</button>
+                            
+                            <div class="alamel-success-message" id="successMessage">
+                                <i class="fas fa-check-circle ms-2"></i>
+                                تم إرسال رسالتك بنجاح! سنتواصل معك قريباً.
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Hours & Map Section -->
+    <section class="alamel-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-up">
+                    <div class="alamel-working-hours">
+                        <h4>
+                            <i class="fas fa-clock" style="color: var(--primary-color);"></i>
+                            ساعات العمل الرسمية
+                        </h4>
+                        
+                        <div class="alamel-hours-item">
+                            <span class="alamel-hours-day">السبت - الخميس</span>
+                            <span class="alamel-hours-time">09:00 صباحاً - 08:00 مساءً</span>
+                        </div>
+                        <div class="alamel-hours-item">
+                            <span class="alamel-hours-day">الجمعة</span>
+                            <span class="alamel-hours-time">مغلق</span>
+                        </div>
+                        <div class="alamel-hours-item">
+                            <span class="alamel-hours-day">أيام العطل الرسمية</span>
+                            <span class="alamel-hours-time">مغلق</span>
+                        </div>
+                        
+                        <div class="alamel-hours-note">
+                            <i class="fas fa-info-circle ms-2" style="color: var(--primary-color);"></i>
+                            يمكنكم التواصل معنا عبر البريد الإلكتروني على مدار الساعة وسيتم الرد في أقرب وقت
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="alamel-working-hours">
+                        <h4>
+                            <i class="fas fa-headset" style="color: var(--primary-color);"></i>
+                            الدعم الفني المباشر
+                        </h4>
+                        
+                        <div class="alamel-hours-item">
+                            <span class="alamel-hours-day">الدعم الهاتفي</span>
+                            <span class="alamel-hours-time">+213 000 000 000</span>
+                        </div>
+                        <div class="alamel-hours-item">
+                            <span class="alamel-hours-day">الدعم عبر الواتساب</span>
+                            <span class="alamel-hours-time">+213 000 000 000</span>
+                        </div>
+                        <div class="alamel-hours-item">
+                            <span class="alamel-hours-day">الدعم عبر البريد</span>
+                            <span class="alamel-hours-time">support@alamel.dz</span>
+                        </div>
+                        <div class="alamel-hours-item">
+                            <span class="alamel-hours-day">وقت الرد المتوقع</span>
+                            <span class="alamel-hours-time">خلال 24 ساعة</span>
+                        </div>
+                        
+                        <div class="alamel-hours-note">
+                            <i class="fas fa-star ms-2" style="color: var(--warning-color);"></i>
+                            فريق الدعم متاح للإجابة على جميع استفساراتكم
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="alamel-map" data-aos="fade-up" data-aos-delay="300">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172911.3924856945!2d-8.23308885!3d27.67432525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc4b6a1b1b1b1b1b%3A0x1b1b1b1b1b1b1b1b!2sTindouf%2C%20Algeria!5e0!3m2!1sen!2sdz!4v1634567890123!5m2!1sen!2sdz" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="alamel-section bg-white">
+        <div class="container">
+            <div class="alamel-section-header" data-aos="fade-up">
+                <span class="alamel-section-subtitle">الأسئلة الشائعة</span>
+                <h2 class="alamel-section-title">استفسارات متكررة</h2>
+                <p class="alamel-section-description">ربما تجد إجابتك هنا</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqContact">
+                        <div class="accordion-item alamel-faq-item" data-aos="fade-up">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button alamel-faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq1">
+                                    كيف يمكنني التسجيل في المؤسسة؟
+                                </button>
+                            </h2>
+                            <div id="contactFaq1" class="accordion-collapse collapse show" data-bs-parent="#faqContact">
+                                <div class="accordion-body alamel-faq-body">
+                                    يمكنك التسجيل بسهولة عبر موقعنا الإلكتروني من خلال الضغط على زر "حساب جديد" في أعلى الصفحة، أو بزيارة المؤسسة مباشرة.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item alamel-faq-item" data-aos="fade-up" data-aos-delay="100">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed alamel-faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq2">
+                                    ما هي طرق الدفع المتاحة؟
+                                </button>
+                            </h2>
+                            <div id="contactFaq2" class="accordion-collapse collapse" data-bs-parent="#faqContact">
+                                <div class="accordion-body alamel-faq-body">
+                                    نوفر عدة طرق دفع آمنة: الدفع عبر CCP، Baridimob، بطاقة EDAHABIA
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item alamel-faq-item" data-aos="fade-up" data-aos-delay="150">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed alamel-faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#contactFaq3">
+                                    هل توفرون دروساً عن بعد؟
+                                </button>
+                            </h2>
+                            <div id="contactFaq3" class="accordion-collapse collapse" data-bs-parent="#faqContact">
+                                <div class="accordion-body alamel-faq-body">
+                                    نعم، نوفر منصة رقمية متكاملة للتعليم عن بعد مع دروس مسجلة ومباشرة، وتمارين تفاعلية.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="alamel-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://via.placeholder.com/150x40/FFFFFF/1A4B7A?text=مؤسسة+الأمل" alt="مؤسسة الأمل" class="mb-3">
+                    <p>مؤسسة الأمل للدعم المدرسي - ثقة وأمان منذ 2026. نضع مستقبل أبنائكم في قلب اهتماماتنا.</p>
+                    <div class="alamel-social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4>روابط سريعة</h4>
+                    <ul class="alamel-footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="#">عن المؤسسة</a></li>
+                        <li><a href="#">لماذا نحن</a></li>
+                        <li><a href="#">الباقات</a></li>
+                        <li><a href="contact.html">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4>المراحل</h4>
+                    <ul class="alamel-footer-links">
+                        <li><a href="#">الطور الابتدائي</a></li>
+                        <li><a href="#">الطور المتوسط</a></li>
+                        <li><a href="#">الطور الثانوي</a></li>
+                        <li><a href="#">تحضير البكالوريا</a></li>
+                        <li><a href="#">دورات عن بعد</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4>معلومات الاتصال</h4>
+                    <ul class="alamel-footer-links">
+                        <li><i class="fas fa-map-marker-alt ms-2"></i> الجزائر - تندوف</li>
+                        <li><i class="fas fa-phone ms-2"></i>+213 000 000 000</li>
+                        <li><i class="fas fa-envelope ms-2"></i> contact@alamel.dz</li>
+                    </ul>
+                    
+                    <h4 class="mt-4">وسائل الدفع الآمنة</h4>
+                    <div class="alamel-payment-methods">
+                        <span class="alamel-payment-method">CCP</span>
+                        <span class="alamel-payment-method">Baridimob</span>
+                        <span class="alamel-payment-method">EDAHABIA</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="alamel-footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2026 مؤسسة الأمل للدعم المدرسي - ثقتكم أمانة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.alamel-header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = '#0D2F4F';
+            } else {
+                header.style.backgroundColor = '#1A4B7A';
+            }
+        });
+        
+        // Form Submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const successMsg = document.getElementById('successMessage');
+            successMsg.classList.add('show');
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                successMsg.classList.remove('show');
+            }, 5000);
+            
+            // Reset form (optional)
+            // this.reset();
+        });
+    </script>
+</body>
+</html>

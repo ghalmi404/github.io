@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سجل الحضور - مؤسسة الأمل</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="../index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="../logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-user"></i>
+                        <span>أحمد علي</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="alamel-dashboard">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="alamel-dashboard-sidebar">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h3 class="user-name">أحمد محمد علي</h3>
+                            <span class="user-level">السنة الثانية متوسط</span>
+                        </div>
+                        
+                        <ul class="alamel-dashboard-menu">
+                            <li><a href="student-dashboard.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                            <li><a href="student-profile.html"><i class="fas fa-user"></i> الملف الشخصي</a></li>
+                            <li><a href="my-courses.html"><i class="fas fa-book"></i> دوراتي</a></li>
+                            <li><a href="live-class.html"><i class="fas fa-video"></i> الحصص المباشرة</a></li>
+                            <li><a href="assignments.html"><i class="fas fa-tasks"></i> الواجبات</a></li>
+                            <li><a href="quizzes.html"><i class="fas fa-question-circle"></i> الاختبارات</a></li>
+                            <li><a href="results.html"><i class="fas fa-chart-line"></i> النتائج</a></li>
+                            <li><a href="attendance.html" class="active"><i class="fas fa-calendar-check"></i> الحضور</a></li>
+                            <li><a href="messages.html"><i class="fas fa-envelope"></i> الرسائل</a></li>
+                            <li><a href="subscription.html"><i class="fas fa-credit-card"></i> الاشتراك</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                
+                <div class="col-lg-9">
+                    <div class="alamel-dashboard-main">
+                        <div class="alamel-dashboard-header">
+                            <h1 class="alamel-dashboard-title">سجل الحضور</h1>
+                            <select class="form-control" style="width: 200px;">
+                                <option>فبراير 2026</option>
+                                <option>يناير 2026</option>
+                            </select>
+                        </div>
+                        
+                        <div class="alamel-attendance-grid">
+                            <div class="alamel-attendance-day present">
+                                <div class="day">السبت</div>
+                                <div class="date">15</div>
+                            </div>
+                            <div class="alamel-attendance-day present">
+                                <div class="day">الأحد</div>
+                                <div class="date">16</div>
+                            </div>
+                            <div class="alamel-attendance-day absent">
+                                <div class="day">الاثنين</div>
+                                <div class="date">17</div>
+                            </div>
+                            <div class="alamel-attendance-day present">
+                                <div class="day">الثلاثاء</div>
+                                <div class="date">18</div>
+                            </div>
+                            <div class="alamel-attendance-day late">
+                                <div class="day">الأربعاء</div>
+                                <div class="date">19</div>
+                            </div>
+                            <div class="alamel-attendance-day present">
+                                <div class="day">الخميس</div>
+                                <div class="date">20</div>
+                            </div>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div style="width: 20px; height: 20px; background: rgba(39,174,96,0.2); border-radius: 5px;"></div>
+                                    <span>حاضر: 18 يوم</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div style="width: 20px; height: 20px; background: rgba(220,53,69,0.2); border-radius: 5px;"></div>
+                                    <span>غائب: 3 أيام</span>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div style="width: 20px; height: 20px; background: rgba(241,196,15,0.2); border-radius: 5px;"></div>
+                                    <span>متأخر: يومان</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الحصص المباشرة - الأستاذ | مؤسسة الأمل</title>
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="../index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="../logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="teacher-profile.html">
+                        <i class="fas fa-user"></i>
+                        <span>أ. محمد</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="alamel-dashboard">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="alamel-dashboard-sidebar">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3 class="user-name">محمد عبدالله</h3>
+                            <span class="user-level">أستاذ الرياضيات</span>
+                        </div>
+                        
+                        <ul class="alamel-dashboard-menu">
+                            <li><a href="teacher-dashboard.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                            <li><a href="teacher-profile.html"><i class="fas fa-user"></i> الملف الشخصي</a></li>
+                            <li><a href="manage-courses.html"><i class="fas fa-book"></i> إدارة الدورات</a></li>
+                            <li><a href="upload-lesson.html"><i class="fas fa-upload"></i> رفع درس</a></li>
+                            <li><a href="create-quiz.html"><i class="fas fa-question-circle"></i> إنشاء اختبار</a></li>
+                            <li><a href="live-class.html" class="active"><i class="fas fa-video"></i> الحصص المباشرة</a></li>
+                            <li><a href="student-list.html"><i class="fas fa-users"></i> قائمة الطلاب</a></li>
+                            <li><a href="teacher-messages.html"><i class="fas fa-envelope"></i> الرسائل</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <div class="alamel-dashboard-main">
+                        <!-- Header -->
+                        <div class="alamel-dashboard-header">
+                            <h1 class="alamel-dashboard-title">الحصص المباشرة</h1>
+                            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#scheduleLiveModal">
+                                <i class="fas fa-plus"></i> جدولة حصة جديدة
+                            </button>
+                        </div>
+                        
+                        <!-- Live Class Stats -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-4">
+                                <div class="alamel-admin-card">
+                                    <div class="alamel-admin-card-header">
+                                        <h3 class="alamel-admin-card-title">إجمالي الحصص</h3>
+                                        <div class="alamel-admin-card-icon" style="background: var(--gradient-primary);">
+                                            <i class="fas fa-video"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alamel-admin-card-value">24</div>
+                                    <div class="alamel-admin-card-change positive">
+                                        <i class="fas fa-arrow-up"></i> +4 هذا الشهر
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="alamel-admin-card">
+                                    <div class="alamel-admin-card-header">
+                                        <h3 class="alamel-admin-card-title">الحضور اليوم</h3>
+                                        <div class="alamel-admin-card-icon" style="background: var(--gradient-secondary);">
+                                            <i class="fas fa-users"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alamel-admin-card-value">32</div>
+                                    <div class="alamel-admin-card-change positive">
+                                        <i class="fas fa-arrow-up"></i> +8 عن الأمس
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="alamel-admin-card">
+                                    <div class="alamel-admin-card-header">
+                                        <h3 class="alamel-admin-card-title">معدل الحضور</h3>
+                                        <div class="alamel-admin-card-icon" style="background: linear-gradient(135deg, #E67E22, #F39C12);">
+                                            <i class="fas fa-chart-line"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alamel-admin-card-value">85%</div>
+                                    <div class="alamel-admin-card-change positive">
+                                        <i class="fas fa-arrow-up"></i> +5% هذا الأسبوع
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Today's Live Classes -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h4 class="mb-3">حصص اليوم</h4>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="alamel-live-card">
+                                    <span class="alamel-live-badge">بعد 30 دقيقة</span>
+                                    <h3 class="alamel-live-title">الرياضيات - المعادلات</h3>
+                                    <p class="alamel-live-teacher">السنة الثانية متوسط - المجموعة أ</p>
+                                    <div class="alamel-live-time">
+                                        <i class="fas fa-clock"></i>
+                                        <span>10:30 - 12:00 صباحاً</span>
+                                    </div>
+                                    <div class="alamel-live-time">
+                                        <i class="fas fa-users"></i>
+                                        <span>18 طالب مسجل</span>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-3">
+                                        <a href="#" class="alamel-live-btn">بدء الحصة</a>
+                                        <button class="btn btn-outline-light">تعديل</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="alamel-live-card" style="background: linear-gradient(135deg, #27AE60, #2ECC71);">
+                                    <span class="alamel-live-badge">2:00 مساءً</span>
+                                    <h3 class="alamel-live-title">الرياضيات - الهندسة</h3>
+                                    <p class="alamel-live-teacher">السنة الثالثة متوسط - المجموعة ب</p>
+                                    <div class="alamel-live-time">
+                                        <i class="fas fa-clock"></i>
+                                        <span>14:00 - 15:30 مساءً</span>
+                                    </div>
+                                    <div class="alamel-live-time">
+                                        <i class="fas fa-users"></i>
+                                        <span>15 طالب مسجل</span>
+                                    </div>
+                                    <div class="d-flex gap-2 mt-3">
+                                        <a href="#" class="alamel-live-btn">بدء الحصة</a>
+                                        <button class="btn btn-outline-light">تعديل</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Upcoming Classes -->
+                        <div class="row mb-4">
+                            <div class="col-12">
+                                <h4 class="mb-3">الحصص القادمة</h4>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="alamel-course-card">
+                                    <div class="alamel-course-image" style="background: linear-gradient(135deg, #1A4B7A, #2C6B9E); height: 100px;">
+                                        <i class="fas fa-calendar-alt" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <div class="alamel-course-body">
+                                        <h4 class="alamel-course-title">الرياضيات - الجبر</h4>
+                                        <p class="alamel-course-teacher">السنة الثانية متوسط</p>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span><i class="fas fa-clock ms-1"></i> غداً 10:30</span>
+                                            <span class="badge bg-info">12 طالب</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary w-100">عرض التفاصيل</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="alamel-course-card">
+                                    <div class="alamel-course-image" style="background: linear-gradient(135deg, #27AE60, #2ECC71); height: 100px;">
+                                        <i class="fas fa-calendar-alt" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <div class="alamel-course-body">
+                                        <h4 class="alamel-course-title">الرياضيات - الهندسة</h4>
+                                        <p class="alamel-course-teacher">السنة الثالثة متوسط</p>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span><i class="fas fa-clock ms-1"></i> بعد غد 14:00</span>
+                                            <span class="badge bg-info">15 طالب</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary w-100">عرض التفاصيل</a>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="alamel-course-card">
+                                    <div class="alamel-course-image" style="background: linear-gradient(135deg, #E67E22, #F39C12); height: 100px;">
+                                        <i class="fas fa-calendar-alt" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <div class="alamel-course-body">
+                                        <h4 class="alamel-course-title">الرياضيات - الإحصاء</h4>
+                                        <p class="alamel-course-teacher">السنة الرابعة متوسط</p>
+                                        <div class="d-flex justify-content-between align-items-center mb-2">
+                                            <span><i class="fas fa-clock ms-1"></i> 20 فبراير 10:30</span>
+                                            <span class="badge bg-info">20 طالب</span>
+                                        </div>
+                                        <a href="#" class="btn btn-outline-primary w-100">عرض التفاصيل</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Past Classes -->
+                        <div class="row">
+                            <div class="col-12">
+                                <h4 class="mb-3">الحصص السابقة</h4>
+                            </div>
+                            <div class="col-12">
+                                <div class="alamel-admin-card">
+                                    <table class="alamel-admin-table">
+                                        <thead>
+                                            <tr>
+                                                <th>عنوان الحصة</th>
+                                                <th>المستوى</th>
+                                                <th>التاريخ</th>
+                                                <th>المدة</th>
+                                                <th>الحضور</th>
+                                                <th>التسجيل</th>
+                                                <th>الإجراءات</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>المعادلات من الدرجة الأولى</td>
+                                                <td>السنة الثانية متوسط</td>
+                                                <td>15 فبراير 2026</td>
+                                                <td>45 دقيقة</td>
+                                                <td>16/18</td>
+                                                <td><a href="#" class="btn btn-sm btn-outline-primary">مشاهدة</a></td>
+                                                <td>
+                                                    <button class="alamel-action-btn view"><i class="fas fa-chart-bar"></i></button>
+                                                    <button class="alamel-action-btn edit"><i class="fas fa-edit"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>النسبة المئوية</td>
+                                                <td>السنة الثالثة متوسط</td>
+                                                <td>14 فبراير 2026</td>
+                                                <td>50 دقيقة</td>
+                                                <td>14/15</td>
+                                                <td><a href="#" class="btn btn-sm btn-outline-primary">مشاهدة</a></td>
+                                                <td>
+                                                    <button class="alamel-action-btn view"><i class="fas fa-chart-bar"></i></button>
+                                                    <button class="alamel-action-btn edit"><i class="fas fa-edit"></i></button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>المتطابقات الشهيرة</td>
+                                                <td>السنة الرابعة متوسط</td>
+                                                <td>13 فبراير 2026</td>
+                                                <td>40 دقيقة</td>
+                                                <td>18/20</td>
+                                                <td><a href="#" class="btn btn-sm btn-outline-primary">مشاهدة</a></td>
+                                                <td>
+                                                    <button class="alamel-action-btn view"><i class="fas fa-chart-bar"></i></button>
+                                                    <button class="alamel-action-btn edit"><i class="fas fa-edit"></i></button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Live Class Modal -->
+    <div class="modal fade" id="scheduleLiveModal" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">جدولة حصة مباشرة جديدة</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="alamel-form-group">
+                                    <label class="alamel-form-label">عنوان الحصة</label>
+                                    <input type="text" class="alamel-form-control" placeholder="أدخل عنوان الحصة">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="alamel-form-group">
+                                    <label class="alamel-form-label">اختر الدورة</label>
+                                    <select class="alamel-form-control">
+                                        <option>الرياضيات - السنة الثانية متوسط</option>
+                                        <option>الرياضيات - السنة الثالثة متوسط</option>
+                                        <option>الرياضيات - السنة الرابعة متوسط</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="alamel-form-group">
+                                    <label class="alamel-form-label">التاريخ</label>
+                                    <input type="date" class="alamel-form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="alamel-form-group">
+                                    <label class="alamel-form-label">من الساعة</label>
+                                    <input type="time" class="alamel-form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="alamel-form-group">
+                                    <label class="alamel-form-label">إلى الساعة</label>
+                                    <input type="time" class="alamel-form-control">
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="alamel-form-group">
+                                    <label class="alamel-form-label">وصف الحصة</label>
+                                    <textarea class="alamel-form-control" rows="3" placeholder="أدخل وصفاً مختصراً للحصة"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary">جدولة الحصة</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.alamel-header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = '#0D2F4F';
+            } else {
+                header.style.backgroundColor = '#1A4B7A';
+            }
+        });
+    </script>
+</body>
+</html>

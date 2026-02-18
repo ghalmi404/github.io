@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إدارة المدفوعات - مؤسسة الأمل</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="../index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="../logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="settings.html">
+                        <i class="fas fa-user"></i>
+                        <span>المشرف</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="alamel-dashboard">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="alamel-dashboard-sidebar">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h3 class="user-name">إدارة المؤسسة</h3>
+                            <span class="user-level">مدير النظام</span>
+                        </div>
+                        
+                        <ul class="alamel-dashboard-menu">
+                            <li><a href="admin-dashboard.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                            <li><a href="manage-students.html"><i class="fas fa-user-graduate"></i> إدارة الطلاب</a></li>
+                            <li><a href="manage-teachers.html"><i class="fas fa-chalkboard-teacher"></i> إدارة الأساتذة</a></li>
+                            <li><a href="admin-manage-courses.html"><i class="fas fa-book"></i> إدارة الدورات</a></li>
+                            <li><a href="manage-subscriptions.html"><i class="fas fa-credit-card"></i> إدارة الاشتراكات</a></li>
+                            <li><a href="manage-payments.html" class="active"><i class="fas fa-money-bill"></i> المدفوعات</a></li>
+                            <li><a href="reports.html"><i class="fas fa-chart-line"></i> التقارير</a></li>
+                            <li><a href="settings.html"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                
+                <div class="col-lg-9">
+                    <div class="alamel-dashboard-main">
+                        <div class="alamel-dashboard-header">
+                            <h1 class="alamel-dashboard-title">المدفوعات</h1>
+                        </div>
+                        
+                        <!-- Payment Stats -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-4">
+                                <div class="alamel-admin-card">
+                                    <div class="alamel-admin-card-header">
+                                        <h3 class="alamel-admin-card-title">إجمالي الإيرادات</h3>
+                                        <div class="alamel-admin-card-icon">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alamel-admin-card-value">3,456,000 <small>دج</small></div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="alamel-admin-card">
+                                    <div class="alamel-admin-card-header">
+                                        <h3 class="alamel-admin-card-title">مدفوعات هذا الشهر</h3>
+                                        <div class="alamel-admin-card-icon" style="background: var(--gradient-secondary);">
+                                            <i class="fas fa-calendar-check"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alamel-admin-card-value">892,000 <small>دج</small></div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="alamel-admin-card">
+                                    <div class="alamel-admin-card-header">
+                                        <h3 class="alamel-admin-card-title">مدفوعات معلقة</h3>
+                                        <div class="alamel-admin-card-icon" style="background: var(--warning-color);">
+                                            <i class="fas fa-clock"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alamel-admin-card-value">156,000 <small>دج</small></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Filter Bar -->
+                        <div class="alamel-filter-bar">
+                            <div class="alamel-filter-search">
+                                <i class="fas fa-search"></i>
+                                <input type="text" placeholder="بحث عن معاملة...">
+                            </div>
+                            <select class="alamel-filter-select">
+                                <option>جميع طرق الدفع</option>
+                                <option>CCP</option>
+                                <option>Baridimob</option>
+                                <option>EDAHABIA</option>
+                                <option>بطاقة بنكية</option>
+                            </select>
+                            <select class="alamel-filter-select">
+                                <option>جميع الحالات</option>
+                                <option>مكتمل</option>
+                                <option>معلق</option>
+                                <option>ملغي</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Payments Table -->
+                        <table class="alamel-admin-table">
+                            <thead>
+                                <tr>
+                                    <th>المشترك</th>
+                                    <th>رقم المعاملة</th>
+                                    <th>التاريخ</th>
+                                    <th>الباقة</th>
+                                    <th>المبلغ</th>
+                                    <th>طريقة الدفع</th>
+                                    <th>الحالة</th>
+                                    <th>الإجراءات</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="alamel-admin-user-info">
+                                            <div class="alamel-admin-avatar">
+                                                <i class="fas fa-user-graduate"></i>
+                                            </div>
+                                            <div>
+                                                <div class="alamel-admin-user-name">أحمد محمد علي</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>#INV-2026-001</td>
+                                    <td>15/02/2026</td>
+                                    <td>الباقة الماسية</td>
+                                    <td>3000 دج</td>
+                                    <td>CCP</td>
+                                    <td><span class="alamel-status-badge status-paid">مكتمل</span></td>
+                                    <td>
+                                        <button class="alamel-action-btn view"><i class="fas fa-eye"></i></button>
+                                        <button class="alamel-action-btn"><i class="fas fa-print"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="alamel-admin-user-info">
+                                            <div class="alamel-admin-avatar" style="background: var(--gradient-secondary);">
+                                                <i class="fas fa-user-graduate"></i>
+                                            </div>
+                                            <div>
+                                                <div class="alamel-admin-user-name">فاطمة الزهراء</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>#INV-2026-002</td>
+                                    <td>14/02/2026</td>
+                                    <td>الباقة الذهبية</td>
+                                    <td>2000 دج</td>
+                                    <td>Baridimob</td>
+                                    <td><span class="alamel-status-badge status-paid">مكتمل</span></td>
+                                    <td>
+                                        <button class="alamel-action-btn view"><i class="fas fa-eye"></i></button>
+                                        <button class="alamel-action-btn"><i class="fas fa-print"></i></button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="alamel-admin-user-info">
+                                            <div class="alamel-admin-avatar" style="background: linear-gradient(135deg, #E67E22, #F39C12);">
+                                                <i class="fas fa-user-graduate"></i>
+                                            </div>
+                                            <div>
+                                                <div class="alamel-admin-user-name">محمد أمين</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>#INV-2026-003</td>
+                                    <td>13/02/2026</td>
+                                    <td>الباقة الفضية</td>
+                                    <td>1000 دج</td>
+                                    <td>EDAHABIA</td>
+                                    <td><span class="alamel-status-badge status-unpaid">معلق</span></td>
+                                    <td>
+                                        <button class="alamel-action-btn view"><i class="fas fa-eye"></i></button>
+                                        <button class="alamel-action-btn"><i class="fas fa-print"></i></button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

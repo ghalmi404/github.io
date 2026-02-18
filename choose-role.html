@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختيار نوع المستخدم - مؤسسة الأمل</title>
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <style>
+        .alamel-choose-role {
+            min-height: calc(100vh - 60px);
+            display: flex;
+            align-items: center;
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        
+        .alamel-role-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-lg);
+            text-align: center;
+            transition: var(--transition);
+            height: 100%;
+            border: 2px solid transparent;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .alamel-role-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary-color);
+            box-shadow: var(--shadow-xl, 0 20px 40px rgba(26, 75, 122, 0.2));
+        }
+        
+        .alamel-role-icon {
+            width: 120px;
+            height: 120px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 3.5rem;
+            transition: var(--transition);
+        }
+        
+        .alamel-role-card:hover .alamel-role-icon {
+            transform: scale(1.1);
+            background: var(--gradient-secondary);
+        }
+        
+        .alamel-role-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 0.5rem;
+        }
+        
+        .alamel-role-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .alamel-role-badge {
+            display: inline-block;
+            padding: 0.35rem 1.5rem;
+            background: var(--bg-light);
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .alamel-role-card:hover .alamel-role-badge {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .alamel-back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            margin-top: 2rem;
+            transition: var(--transition);
+        }
+        
+        .alamel-back-link:hover {
+            color: var(--primary-color);
+            gap: 1rem;
+        }
+        
+        @media (max-width: 768px) {
+            .alamel-role-icon {
+                width: 100px;
+                height: 100px;
+                font-size: 3rem;
+            }
+            
+            .alamel-role-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="contact.html">
+                        <i class="fas fa-envelope"></i>
+                        <span>اتصل بنا</span>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="login.html">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>دخول</span>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link alamel-btn-outline" href="register.html">
+                        <i class="fas fa-user-plus"></i>
+                        <span>حساب جديد</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Choose Role Section -->
+    <section class="alamel-choose-role">
+        <div class="container">
+            <div class="text-center mb-5" data-aos="fade-down">
+                <h1 class="alamel-hero-title" style="color: var(--text-dark); font-size: 2.5rem;">مرحباً بعودتك!</h1>
+                <p class="alamel-hero-subtitle" style="color: var(--text-muted);">اختر نوع المستخدم لتسجيل الدخول</p>
+            </div>
+            
+            <div class="row g-4 justify-content-center">
+                <!-- Student Card -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <a href="student/student-dashboard.html" class="alamel-role-card">
+                        <div class="alamel-role-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3 class="alamel-role-title">طالب</h3>
+                        <p class="alamel-role-desc">الدخول إلى لوحة تحكم الطالب لمتابعة الدروس والواجبات والاختبارات</p>
+                        <span class="alamel-role-badge">دخول كطالب</span>
+                    </a>
+                </div>
+                
+                <!-- Teacher Card -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="teacher/teacher-dashboard.html" class="alamel-role-card">
+                        <div class="alamel-role-icon" style="background: var(--gradient-secondary);">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <h3 class="alamel-role-title">أستاذ</h3>
+                        <p class="alamel-role-desc">الدخول إلى لوحة تحكم الأستاذ لإدارة الدروس والاختبارات والطلاب</p>
+                        <span class="alamel-role-badge">دخول كأستاذ</span>
+                    </a>
+                </div>
+                
+                <!-- Admin Card -->
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <a href="admin/admin-dashboard.html" class="alamel-role-card">
+                        <div class="alamel-role-icon" style="background: linear-gradient(135deg, #E67E22, #F39C12);">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h3 class="alamel-role-title">مشرف</h3>
+                        <p class="alamel-role-desc">الدخول إلى لوحة تحكم المشرف لإدارة النظام والمستخدمين والإعدادات</p>
+                        <span class="alamel-role-badge">دخول كمشرف</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center" data-aos="fade-up">
+                <a href="login.html" class="alamel-back-link">
+                    <i class="fas fa-arrow-right"></i>
+                    العودة إلى صفحة تسجيل الدخول
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.alamel-header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = '#0D2F4F';
+            } else {
+                header.style.backgroundColor = '#1A4B7A';
+            }
+        });
+    </script>
+</body>
+</html>

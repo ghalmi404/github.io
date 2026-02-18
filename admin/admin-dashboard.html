@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المشرف - مؤسسة الأمل</title>
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Style CSS (يحتوي على كل التنسيقات) -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="../index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="../logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="settings.html">
+                        <i class="fas fa-user"></i>
+                        <span>المشرف</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="alamel-dashboard">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="alamel-dashboard-sidebar">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h3 class="user-name">إدارة المؤسسة</h3>
+                            <span class="user-level">مدير النظام</span>
+                        </div>
+                        
+                        <ul class="alamel-dashboard-menu">
+                            <li><a href="admin-dashboard.html" class="active"><i class="fas fa-home"></i> الرئيسية</a></li>
+                            <li><a href="manage-students.html"><i class="fas fa-user-graduate"></i> إدارة الطلاب</a></li>
+                            <li><a href="manage-teachers.html"><i class="fas fa-chalkboard-teacher"></i> إدارة الأساتذة</a></li>
+                            <li><a href="admin-manage-courses.html"><i class="fas fa-book"></i> إدارة الدورات</a></li>
+                            <li><a href="manage-subscriptions.html"><i class="fas fa-credit-card"></i> إدارة الاشتراكات</a></li>
+                            <li><a href="manage-payments.html"><i class="fas fa-money-bill"></i> المدفوعات</a></li>
+                            <li><a href="reports.html"><i class="fas fa-chart-line"></i> التقارير</a></li>
+                            <li><a href="settings.html"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <div class="alamel-dashboard-main">
+                        <!-- Header -->
+                        <div class="alamel-dashboard-header">
+                            <h1 class="alamel-dashboard-title">مرحباً بك في لوحة التحكم 👋</h1>
+                            <span class="alamel-dashboard-date">الخميس 18 فبراير 2026</span>
+                        </div>
+                        
+                        <!-- Stats Cards -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-3 col-6">
+                                <div class="alamel-admin-card">
+                                    <div class="alamel-admin-card-header">
+                                        <h3 class="alamel-admin-card-title">إجمالي الطلاب</h3>
+                                        <div class="alamel-admin-card-icon">
+                                            <i class="fas fa-user-graduate"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alamel-admin-card-value">1,248</div>
+                                    <div class="alamel-admin-card-change positive">
+                                        <i class="fas fa-arrow-up"></i> +12% عن الشهر الماضي
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6">
+                                <div class="alamel-admin-card">
+                                    <div class="alamel-admin-card-header">
+                                        <h3 class="alamel-admin-card-title">إجمالي الأساتذة</h3>
+                                        <div class="alamel-admin-card-icon" style="background: var(--gradient-secondary);">
+                                            <i class="fas fa-chalkboard-teacher"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alamel-admin-card-value">48</div>
+                                    <div class="alamel-admin-card-change positive">
+                                        <i class="fas fa-arrow-up"></i> +3 هذا الشهر
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6">
+                                <div class="alamel-admin-card">
+                                    <div class="alamel-admin-card-header">
+                                        <h3 class="alamel-admin-card-title">الاشتراكات النشطة</h3>
+                                        <div class="alamel-admin-card-icon" style="background: linear-gradient(135deg, #E67E22, #F39C12);">
+                                            <i class="fas fa-credit-card"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alamel-admin-card-value">892</div>
+                                    <div class="alamel-admin-card-change positive">
+                                        <i class="fas fa-arrow-up"></i> +8% هذا الأسبوع
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6">
+                                <div class="alamel-admin-card">
+                                    <div class="alamel-admin-card-header">
+                                        <h3 class="alamel-admin-card-title">الإيرادات الشهرية</h3>
+                                        <div class="alamel-admin-card-icon" style="background: linear-gradient(135deg, #27AE60, #2ECC71);">
+                                            <i class="fas fa-money-bill-wave"></i>
+                                        </div>
+                                    </div>
+                                    <div class="alamel-admin-card-value">1,248,000 <small>دج</small></div>
+                                    <div class="alamel-admin-card-change positive">
+                                        <i class="fas fa-arrow-up"></i> +15% هذا الشهر
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Charts Row -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-8">
+                                <div class="alamel-chart-card">
+                                    <div class="alamel-chart-header">
+                                        <h3 class="alamel-chart-title">نمو المستخدمين</h3>
+                                        <div class="alamel-chart-period">
+                                            <button class="btn btn-sm btn-primary">شهري</button>
+                                            <button class="btn btn-sm btn-outline-primary">سنوي</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Static Growth Chart -->
+                                    <div class="alamel-static-chart">
+                                        <div class="alamel-chart-placeholder">
+                                            <div class="alamel-chart-grid"></div>
+                                            
+                                            <div class="alamel-growth-line">
+                                                <svg viewBox="0 0 400 170" preserveAspectRatio="none">
+                                                    <!-- Students Line (أزرق) -->
+                                                    <path d="M 30,150 L 90,120 L 150,90 L 210,60 L 270,40 L 330,25 L 380,15" 
+                                                          stroke="#1A4B7A" stroke-width="3" fill="none"/>
+                                                    
+                                                    <!-- Teachers Line (أخضر) -->
+                                                    <path d="M 30,160 L 90,140 L 150,120 L 210,100 L 270,80 L 330,60 L 380,45" 
+                                                          stroke="#27AE60" stroke-width="3" fill="none"/>
+                                                    
+                                                    <!-- Student Points -->
+                                                    <circle cx="30" cy="150" r="5" fill="#1A4B7A"/>
+                                                    <circle cx="90" cy="120" r="5" fill="#1A4B7A"/>
+                                                    <circle cx="150" cy="90" r="5" fill="#1A4B7A"/>
+                                                    <circle cx="210" cy="60" r="5" fill="#1A4B7A"/>
+                                                    <circle cx="270" cy="40" r="5" fill="#1A4B7A"/>
+                                                    <circle cx="330" cy="25" r="5" fill="#1A4B7A"/>
+                                                    <circle cx="380" cy="15" r="5" fill="#1A4B7A"/>
+                                                    
+                                                    <!-- Teacher Points -->
+                                                    <circle cx="30" cy="160" r="4" fill="#27AE60"/>
+                                                    <circle cx="90" cy="140" r="4" fill="#27AE60"/>
+                                                    <circle cx="150" cy="120" r="4" fill="#27AE60"/>
+                                                    <circle cx="210" cy="100" r="4" fill="#27AE60"/>
+                                                    <circle cx="270" cy="80" r="4" fill="#27AE60"/>
+                                                    <circle cx="330" cy="60" r="4" fill="#27AE60"/>
+                                                    <circle cx="380" cy="45" r="4" fill="#27AE60"/>
+                                                </svg>
+                                            </div>
+                                            
+                                            <!-- X-Axis Labels -->
+                                            <div class="alamel-chart-labels">
+                                                <span>سبتمبر</span>
+                                                <span>أكتوبر</span>
+                                                <span>نوفمبر</span>
+                                                <span>ديسمبر</span>
+                                                <span>يناير</span>
+                                                <span>فبراير</span>
+                                                <span>مارس</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Legend -->
+                                    <div class="alamel-chart-legend">
+                                        <div class="alamel-legend-item">
+                                            <div class="alamel-legend-color students"></div>
+                                            <span>الطلاب</span>
+                                        </div>
+                                        <div class="alamel-legend-item">
+                                            <div class="alamel-legend-color teachers"></div>
+                                            <span>الأساتذة</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-4">
+                                <div class="alamel-chart-card">
+                                    <h3 class="alamel-chart-title mb-3">توزيع المستخدمين</h3>
+                                    
+                                    <!-- Static Donut Chart -->
+                                    <div class="alamel-donut-container">
+                                        <div class="alamel-donut-chart">
+                                            <svg viewBox="0 0 220 220">
+                                                <!-- Background circle -->
+                                                <circle cx="110" cy="110" r="85" class="alamel-donut-bg" stroke="#e9ecef"/>
+                                                
+                                                <!-- Students segment -->
+                                                <circle cx="110" cy="110" r="85" class="alamel-donut-segment students"/>
+                                                
+                                                <!-- Teachers segment -->
+                                                <circle cx="110" cy="110" r="85" class="alamel-donut-segment teachers"/>
+                                                
+                                                <!-- Admins segment -->
+                                                <circle cx="110" cy="110" r="85" class="alamel-donut-segment admins"/>
+                                            </svg>
+                                            
+                                            <div class="alamel-donut-center">
+                                                <div class="alamel-donut-total">1,301</div>
+                                                <div class="alamel-donut-label">إجمالي</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Legend -->
+                                    <div class="alamel-chart-legend">
+                                        <div class="alamel-legend-item">
+                                            <div class="alamel-legend-color students"></div>
+                                            <span>الطلاب (1,248)</span>
+                                        </div>
+                                        <div class="alamel-legend-item">
+                                            <div class="alamel-legend-color teachers"></div>
+                                            <span>الأساتذة (48)</span>
+                                        </div>
+                                        <div class="alamel-legend-item">
+                                            <div class="alamel-legend-color admins"></div>
+                                            <span>إداريين (5)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick Actions -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-12">
+                                <h4 class="mb-3">إجراءات سريعة</h4>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="manage-students.html" class="alamel-quick-action">
+                                    <i class="fas fa-user-plus"></i>
+                                    <span>إضافة طالب</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="manage-teachers.html" class="alamel-quick-action">
+                                    <i class="fas fa-user-plus"></i>
+                                    <span>إضافة أستاذ</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="admin-manage-courses.html" class="alamel-quick-action">
+                                    <i class="fas fa-plus-circle"></i>
+                                    <span>إضافة دورة</span>
+                                </a>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <a href="reports.html" class="alamel-quick-action">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>تقرير شهري</span>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <!-- Recent Activity & Pending Items -->
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <div class="alamel-admin-card">
+                                    <h4 class="mb-3">آخر النشاطات</h4>
+                                    <ul class="alamel-activity-list">
+                                        <li class="alamel-activity-item">
+                                            <div class="alamel-activity-icon">
+                                                <i class="fas fa-user-graduate"></i>
+                                            </div>
+                                            <div class="alamel-activity-content">
+                                                <div class="alamel-activity-text">تم تسجيل طالب جديد: أحمد محمد</div>
+                                                <div class="alamel-activity-time">منذ 5 دقائق</div>
+                                            </div>
+                                        </li>
+                                        <li class="alamel-activity-item">
+                                            <div class="alamel-activity-icon">
+                                                <i class="fas fa-credit-card"></i>
+                                            </div>
+                                            <div class="alamel-activity-content">
+                                                <div class="alamel-activity-text">اشتراك جديد: فاطمة الزهراء - الباقة الماسية</div>
+                                                <div class="alamel-activity-time">منذ 15 دقيقة</div>
+                                            </div>
+                                        </li>
+                                        <li class="alamel-activity-item">
+                                            <div class="alamel-activity-icon">
+                                                <i class="fas fa-chalkboard-teacher"></i>
+                                            </div>
+                                            <div class="alamel-activity-content">
+                                                <div class="alamel-activity-text">تم إضافة أستاذ جديد: سارة أحمد (رياضيات)</div>
+                                                <div class="alamel-activity-time">منذ ساعة</div>
+                                            </div>
+                                        </li>
+                                        <li class="alamel-activity-item">
+                                            <div class="alamel-activity-icon">
+                                                <i class="fas fa-book"></i>
+                                            </div>
+                                            <div class="alamel-activity-content">
+                                                <div class="alamel-activity-text">تم إضافة درس جديد: المعادلات - الرياضيات</div>
+                                                <div class="alamel-activity-time">منذ ساعتين</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="alamel-admin-card">
+                                    <h4 class="mb-3">في انتظار المراجعة</h4>
+                                    <ul class="alamel-activity-list">
+                                        <li class="alamel-activity-item">
+                                            <div class="alamel-activity-icon" style="background: rgba(241,196,15,0.1); color: var(--warning-color);">
+                                                <i class="fas fa-clock"></i>
+                                            </div>
+                                            <div class="alamel-activity-content">
+                                                <div class="alamel-activity-text">طلبات اشتراك جديدة (3)</div>
+                                                <div class="alamel-activity-time">في انتظار التأكيد</div>
+                                            </div>
+                                        </li>
+                                        <li class="alamel-activity-item">
+                                            <div class="alamel-activity-icon" style="background: rgba(241,196,15,0.1); color: var(--warning-color);">
+                                                <i class="fas fa-user-check"></i>
+                                            </div>
+                                            <div class="alamel-activity-content">
+                                                <div class="alamel-activity-text">طلبات تسجيل أساتذة (2)</div>
+                                                <div class="alamel-activity-time">في انتظار الموافقة</div>
+                                            </div>
+                                        </li>
+                                        <li class="alamel-activity-item">
+                                            <div class="alamel-activity-icon" style="background: rgba(241,196,15,0.1); color: var(--warning-color);">
+                                                <i class="fas fa-credit-card"></i>
+                                            </div>
+                                            <div class="alamel-activity-content">
+                                                <div class="alamel-activity-text">مدفوعات معلقة (5)</div>
+                                                <div class="alamel-activity-time">في انتظار التأكيد</div>
+                                            </div>
+                                        </li>
+                                        <li class="alamel-activity-item">
+                                            <div class="alamel-activity-icon" style="background: rgba(241,196,15,0.1); color: var(--warning-color);">
+                                                <i class="fas fa-book-open"></i>
+                                            </div>
+                                            <div class="alamel-activity-content">
+                                                <div class="alamel-activity-text">دروس بانتظار المراجعة (4)</div>
+                                                <div class="alamel-activity-time">تحتاج إلى موافقة</div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.alamel-header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = '#0D2F4F';
+            } else {
+                header.style.backgroundColor = '#1A4B7A';
+            }
+        });
+    </script>
+</body>
+</html>

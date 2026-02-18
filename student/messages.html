@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الرسائل - مؤسسة الأمل</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="../index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="../logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-user"></i>
+                        <span>أحمد علي</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="alamel-dashboard">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="alamel-dashboard-sidebar">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h3 class="user-name">أحمد محمد علي</h3>
+                            <span class="user-level">السنة الثانية متوسط</span>
+                        </div>
+                        
+                        <ul class="alamel-dashboard-menu">
+                            <li><a href="student-dashboard.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                            <li><a href="student-profile.html"><i class="fas fa-user"></i> الملف الشخصي</a></li>
+                            <li><a href="my-courses.html"><i class="fas fa-book"></i> دوراتي</a></li>
+                            <li><a href="live-class.html"><i class="fas fa-video"></i> الحصص المباشرة</a></li>
+                            <li><a href="assignments.html"><i class="fas fa-tasks"></i> الواجبات</a></li>
+                            <li><a href="quizzes.html"><i class="fas fa-question-circle"></i> الاختبارات</a></li>
+                            <li><a href="results.html"><i class="fas fa-chart-line"></i> النتائج</a></li>
+                            <li><a href="attendance.html"><i class="fas fa-calendar-check"></i> الحضور</a></li>
+                            <li><a href="messages.html" class="active"><i class="fas fa-envelope"></i> الرسائل</a></li>
+                            <li><a href="subscription.html"><i class="fas fa-credit-card"></i> الاشتراك</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                
+                <div class="col-lg-9">
+                    <div class="alamel-dashboard-main">
+                        <div class="alamel-dashboard-header">
+                            <h1 class="alamel-dashboard-title">الرسائل</h1>
+                            <button class="btn btn-primary"><i class="fas fa-plus"></i> رسالة جديدة</button>
+                        </div>
+                        
+                        <ul class="alamel-message-list">
+                            <li class="alamel-message-item unread">
+                                <div class="alamel-message-avatar">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                                <div class="alamel-message-content">
+                                    <div class="alamel-message-header">
+                                        <span class="alamel-message-sender">الأستاذ محمد عبدالله</span>
+                                        <span class="alamel-message-time">منذ 10 دقائق</span>
+                                    </div>
+                                    <div class="alamel-message-title">استفسار حول الواجب</div>
+                                    <div class="alamel-message-preview">هل هناك أي استفسارات حول واجب الرياضيات؟</div>
+                                </div>
+                            </li>
+                            
+                            <li class="alamel-message-item">
+                                <div class="alamel-message-avatar" style="background: var(--gradient-secondary);">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="alamel-message-content">
+                                    <div class="alamel-message-header">
+                                        <span class="alamel-message-sender">إدارة المؤسسة</span>
+                                        <span class="alamel-message-time">الأمس</span>
+                                    </div>
+                                    <div class="alamel-message-title">تحديث مواعيد الحصص</div>
+                                    <div class="alamel-message-preview">نود إعلامكم بتحديث مواعيد الحصص المباشرة...</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

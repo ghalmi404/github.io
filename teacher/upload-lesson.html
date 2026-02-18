@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>رفع درس جديد - مؤسسة الأمل</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="../index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="../logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="teacher-profile.html">
+                        <i class="fas fa-user"></i>
+                        <span>أ. محمد</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="alamel-dashboard">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="alamel-dashboard-sidebar">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3 class="user-name">محمد عبدالله</h3>
+                            <span class="user-level">أستاذ الرياضيات</span>
+                        </div>
+                        
+                        <ul class="alamel-dashboard-menu">
+                            <li><a href="teacher-dashboard.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                            <li><a href="teacher-profile.html"><i class="fas fa-user"></i> الملف الشخصي</a></li>
+                            <li><a href="manage-courses.html"><i class="fas fa-book"></i> إدارة الدورات</a></li>
+                            <li><a href="upload-lesson.html" class="active"><i class="fas fa-upload"></i> رفع درس</a></li>
+                            <li><a href="create-quiz.html"><i class="fas fa-question-circle"></i> إنشاء اختبار</a></li>
+                            <li><a href="student-list.html"><i class="fas fa-users"></i> قائمة الطلاب</a></li>
+                            <li><a href="teacher-messages.html"><i class="fas fa-envelope"></i> الرسائل</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <div class="alamel-dashboard-main">
+                        <div class="alamel-dashboard-header">
+                            <h1 class="alamel-dashboard-title">رفع درس جديد</h1>
+                        </div>
+                        
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">اختر الدورة</label>
+                                        <select class="alamel-form-control">
+                                            <option>الرياضيات - السنة الثانية متوسط</option>
+                                            <option>الرياضيات - السنة الثالثة متوسط</option>
+                                            <option>الرياضيات - السنة الرابعة متوسط</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">عنوان الدرس</label>
+                                        <input type="text" class="alamel-form-control" placeholder="أدخل عنوان الدرس">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">وصف الدرس</label>
+                                        <textarea class="alamel-form-control" rows="3" placeholder="أدخل وصفاً مختصراً للدرس"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Upload Area -->
+                            <div class="alamel-upload-area" id="uploadArea">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <h4>اسحب وأفلت الفيديو هنا</h4>
+                                <p>أو انقر لاختيار ملف</p>
+                                <input type="file" id="fileInput" style="display: none;" accept="video/*">
+                                <button type="button" class="btn btn-outline-primary" onclick="document.getElementById('fileInput').click()">
+                                    اختر ملف
+                                </button>
+                                <p class="mt-2 small text-muted">يدعم: MP4, AVI, MOV (الحد الأقصى: 500MB)</p>
+                            </div>
+                            
+                            <!-- File List -->
+                            <ul class="alamel-file-list" id="fileList"></ul>
+                            
+                            <div class="row mt-4">
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">مدة الفيديو</label>
+                                        <input type="text" class="alamel-form-control" placeholder="مثال: 45 دقيقة">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">الموارد المرفقة</label>
+                                        <input type="file" class="alamel-form-control" multiple>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="alamel-form-btn">رفع الدرس</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        // File Upload Handling
+        const uploadArea = document.getElementById('uploadArea');
+        const fileInput = document.getElementById('fileInput');
+        const fileList = document.getElementById('fileList');
+        
+        uploadArea.addEventListener('click', () => fileInput.click());
+        
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = 'var(--primary-color)';
+        });
+        
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.style.borderColor = '#e9ecef';
+        });
+        
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = '#e9ecef';
+            handleFiles(e.dataTransfer.files);
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+        
+        function handleFiles(files) {
+            fileList.innerHTML = '';
+            for (let file of files) {
+                const fileSize = (file.size / (1024 * 1024)).toFixed(2);
+                const li = document.createElement('li');
+                li.className = 'alamel-file-item';
+                li.innerHTML = `
+                    <i class="fas fa-video"></i>
+                    <div class="alamel-file-info">
+                        <div class="alamel-file-name">${file.name}</div>
+                        <div class="alamel-file-size">${fileSize} MB</div>
+                    </div>
+                    <i class="fas fa-times alamel-file-remove" onclick="this.parentElement.remove()"></i>
+                `;
+                fileList.appendChild(li);
+            }
+        }
+    </script>
+</body>
+</html>

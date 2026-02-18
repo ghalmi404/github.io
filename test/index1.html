@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مؤسسة الأمل للدعم المدرسي | تعليم متكامل لمستقبل أفضل</title>
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts - Arabic Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6C5CE7;
+            --primary-light: #8B7CFF;
+            --primary-dark: #4A3B9F;
+            --secondary-color: #00B894;
+            --accent-color: #FD79A8;
+            --warning-color: #FDCB6E;
+            --danger-color: #FF7675;
+            --dark-bg: #2D3436;
+            --light-bg: #F5F6FA;
+            --card-bg: #FFFFFF;
+            --text-primary: #2D3436;
+            --text-secondary: #636E72;
+            --shadow-sm: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 10px 25px rgba(108, 92, 231, 0.1);
+            --shadow-lg: 0 20px 40px rgba(108, 92, 231, 0.15);
+            --gradient-primary: linear-gradient(135deg, #6C5CE7 0%, #8B7CFF 100%);
+            --gradient-secondary: linear-gradient(135deg, #00B894 0%, #55EFC4 100%);
+            --gradient-accent: linear-gradient(135deg, #FD79A8 0%, #FFA7C4 100%);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --border-radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            color: var(--text-primary);
+            background-color: var(--light-bg);
+            overflow-x: hidden;
+            padding-top: 60px;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Tajawal', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light-bg);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--gradient-primary);
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--primary-dark);
+        }
+
+        /* Header Styles */
+        .hsoub-header {
+            background: var(--gradient-primary);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            z-index: 2000;
+            box-shadow: var(--shadow-md);
+        }
+
+        .hsoub-box {
+            position: relative;
+            max-width: 1400px;
+            padding: 0;
+            margin: 0 auto;
+            height: 100%;
+        }
+
+        .hsoub-logo {
+            position: relative;
+            padding: 10px 15px;
+            float: right;
+            line-height: 0;
+            text-decoration: none;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background: transparent;
+            transition: var(--transition);
+        }
+
+        .hsoub-logo:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .hsoub-logo-img {
+            max-height: 40px;
+            filter: brightness(0) invert(1);
+            transition: var(--transition);
+        }
+
+        .hsoub-menu {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            float: left;
+            display: flex;
+            height: 100%;
+        }
+
+        .hsoub-menu--is-minor {
+            position: absolute;
+            left: 0;
+            text-align: left;
+            z-index: 10;
+        }
+
+        .hsoub-menu-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+            background: transparent;
+        }
+
+        .hsoub-menu-item-link {
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            font-size: 15px;
+            font-weight: 500;
+            color: white;
+            text-decoration: none;
+            height: 100%;
+            transition: var(--transition);
+        }
+
+        .hsoub-menu-item-link i {
+            margin-left: 8px;
+            font-size: 16px;
+        }
+
+        .hsoub-menu-item-link:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+        }
+
+        .hsoub-menu-item-link--is-button {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 8px 0;
+            padding: 0 25px;
+            border-radius: 30px;
+            height: 44px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hsoub-menu-item-link--is-button:hover {
+            background: white;
+            color: var(--primary-color) !important;
+            border-color: white;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: var(--gradient-primary);
+            min-height: calc(100vh - 60px);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: 80px 0;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 800px;
+            height: 800px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            color: white;
+        }
+
+        .hero-title {
+            font-size: 4rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-title span {
+            color: var(--warning-color);
+            display: block;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.8;
+        }
+
+        .hero-badge {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            display: inline-block;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero-badge i {
+            color: var(--warning-color);
+            margin-left: 8px;
+        }
+
+        .hero-search {
+            position: relative;
+            margin: 40px 0;
+            max-width: 700px;
+        }
+
+        .hero-search .form-control {
+            height: 70px;
+            padding-right: 30px;
+            padding-left: 160px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-search .btn {
+            position: absolute;
+            left: 5px;
+            top: 5px;
+            height: 60px;
+            padding: 0 35px;
+            background: var(--gradient-secondary);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .hero-search .btn:hover {
+            transform: translateX(-5px);
+            box-shadow: 0 10px 25px rgba(0, 184, 148, 0.4);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--warning-color);
+            display: block;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .scroll-down {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            cursor: pointer;
+            z-index: 10;
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-down i {
+            font-size: 30px;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
+            40% {transform: translateX(-50%) translateY(-20px);}
+            60% {transform: translateX(-50%) translateY(-10px);}
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-subtitle {
+            color: var(--primary-color);
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: 2px;
+        }
+
+        .section-description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+
+        /* Cards */
+        .step-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .step-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: var(--transition);
+        }
+
+        .step-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .step-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+        }
+
+        .step-card h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .step-card p {
+            color: var(--text-secondary);
+            margin-bottom: 0;
+            line-height: 1.7;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            height: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            right: -50px;
+            width: 100px;
+            height: 100px;
+            background: var(--gradient-primary);
+            opacity: 0.1;
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .feature-card:hover::after {
+            transform: scale(3);
+        }
+
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .feature-card h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            color: var(--text-secondary);
+            margin-bottom: 0;
+            line-height: 1.7;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+            border: 2px solid transparent;
+        }
+
+        .category-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            color: var(--primary-color);
+        }
+
+        .category-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .category-card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+
+        .testimonial-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            height: 100%;
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .testimonial-avatar {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-left: 1rem;
+        }
+
+        .testimonial-info h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .testimonial-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 0;
+        }
+
+        .testimonial-rating {
+            color: var(--warning-color);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-text {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            font-style: italic;
+            margin-bottom: 0;
+        }
+
+        /* FAQ Accordion */
+        .accordion-item {
+            border: none;
+            margin-bottom: 1rem;
+            background: transparent;
+        }
+
+        .accordion-button {
+            background: white;
+            border-radius: 50px !important;
+            padding: 1.25rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow-md);
+        }
+
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: transparent;
+        }
+
+        .accordion-button::after {
+            margin-right: auto;
+            margin-left: 0;
+        }
+
+        .accordion-body {
+            padding: 1.5rem 2rem;
+            background: white;
+            border-radius: 0 0 50px 50px;
+            margin-top: -10px;
+            color: var(--text-secondary);
+        }
+
+        /* Pricing Cards */
+        .pricing-card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 2.5rem 2rem;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing-card.popular {
+            transform: scale(1.05);
+            border: 2px solid var(--primary-color);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .popular-badge {
+            position: absolute;
+            top: 20px;
+            left: -35px;
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 0.5rem 40px;
+            transform: rotate(-45deg);
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .pricing-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .pricing-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            color: white;
+            font-size: 2rem;
+        }
+
+        .pricing-header h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+        }
+
+        .pricing-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+
+        .pricing-features li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .pricing-features li i {
+            color: var(--secondary-color);
+            margin-left: 0.5rem;
+        }
+
+        .pricing-card .btn {
+            width: 100%;
+            padding: 0.75rem;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section .btn {
+            padding: 1rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+            border-radius: 50px;
+            margin: 0 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .btn-cta-primary {
+            background: white;
+            color: var(--primary-color);
+            border: none;
+        }
+
+        .btn-cta-primary:hover {
+            background: var(--secondary-color);
+            color: white;
+            transform: translateY(-5px);
+        }
+
+        .btn-cta-outline {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-cta-outline:hover {
+            background: white;
+            color: var(--primary-color);
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e1e2f;
+            color: #b0b0b0;
+            padding: 60px 0 20px;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .footer h4 {
+            color: white;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-links a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-light);
+            padding-right: 5px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: var(--transition);
+        }
+
+        .social-links a:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+        }
+
+        .payment-methods {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .payment-method {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 1rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: white;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-title span {
+                font-size: 1.5rem;
+            }
+            
+            .hero-search .form-control {
+                padding-left: 20px;
+            }
+            
+            .hero-search .btn {
+                position: relative;
+                left: auto;
+                top: auto;
+                width: 100%;
+                margin-top: 10px;
+            }
+            
+            .hero-stats {
+                gap: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 1.8rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 576px) {
+            .hsoub-menu-item-link span {
+                display: none;
+            }
+            
+            .hsoub-menu-item-link i {
+                font-size: 1.2rem;
+                margin-left: 0;
+            }
+            
+            .hsoub-menu-item-link--is-button {
+                padding: 0 15px;
+            }
+            
+            .hero-badge {
+                display: block;
+                margin-left: 0;
+            }
+            
+            .cta-section h2 {
+                font-size: 1.8rem;
+            }
+            
+            .cta-section .btn {
+                display: block;
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="hsoub-header">
+        <div class="hsoub-box">
+            <a href="index.html" class="hsoub-logo">
+                <img class="hsoub-logo-img" src="https://via.placeholder.com/120x40/FFFFFF/6C5CE7?text=مؤسسة+الأمل" alt="مؤسسة الأمل">
+            </a>
+            <ul class="hsoub-menu hsoub-menu--is-minor">
+                <li class="hsoub-menu-item">
+                    <a class="hsoub-menu-item-link" href="#">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>دخول</span>
+                    </a>
+                </li>
+                <li class="hsoub-menu-item">
+                    <a class="hsoub-menu-item-link hsoub-menu-item-link--is-button" href="#">
+                        <i class="fas fa-user-plus"></i>
+                        <span>حساب جديد</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <div class="hero-content" data-aos="fade-left">
+                        <div class="hero-badge">
+                            <i class="fas fa-graduation-cap"></i>
+                            تعليم حضوري ورقمي
+                        </div>
+                        <div class="hero-badge">
+                            <i class="fas fa-star"></i>
+                            دعم فردي
+                        </div>
+                        <div class="hero-badge">
+                            <i class="fas fa-chart-line"></i>
+                            نتائج مضمونة
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            مؤسسة الأمل
+                            <span>لمستقبل تعليمي أفضل</span>
+                        </h1>
+                        
+                        <p class="hero-subtitle">
+                            التعليم الحضوري والرقمي في مكان واحد - منصة متكاملة للدعم المدرسي 
+                            مع متابعة فردية وأساتذة مختصين
+                        </p>
+                        
+                        <div class="hero-search">
+                            <input type="text" class="form-control" placeholder="ابحث عن المادة أو المستوى الدراسي...">
+                            <button class="btn">ابحث الآن</button>
+                        </div>
+                        
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">+500</span>
+                                <span class="stat-label">تلميذ مسجل</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">+30</span>
+                                <span class="stat-label">أستاذ مختص</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">رضا الأولياء</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block" data-aos="fade-right">
+                    <img src="https://via.placeholder.com/500x500/FFFFFF/6C5CE7?text=التعليم+الرقمي" alt="Educational Platform" class="img-fluid">
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-down" id="scrollDown">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">كيف نعمل</span>
+                <h2 class="section-title">ثلاث خطوات للنجاح</h2>
+                <p class="section-description">رحلة التعلم مع مؤسسة الأمل بسيطة وممتعة</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-card">
+                        <div class="step-number">1</div>
+                        <h4>سجل في المؤسسة</h4>
+                        <p>اختر المرحلة الدراسية والمادة التي تريد الدعم فيها وقم بتعبئة استمارة التسجيل عبر الموقع أو حضورياً</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-card">
+                        <div class="step-number">2</div>
+                        <h4>احضر الدروس</h4>
+                        <p>احضر الدروس حضورياً في المؤسسة أو تابعها عبر المنصة الرقمية من المنزل مع إمكانية العودة للتسجيلات</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-card">
+                        <div class="step-number">3</div>
+                        <h4>تابع تقدمك</h4>
+                        <p>احصل على متابعة فردية وتقارير دورية عن مستوى التقدم والنتائج مع إمكانية التواصل المباشر مع الأساتذة</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">مميزاتنا</span>
+                <h2 class="section-title">لماذا تختار مؤسسة الأمل؟</h2>
+                <p class="section-description">نقدم تجربة تعليمية متكاملة تجمع بين الأصالة والحداثة</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <h4>تعليم حضوري</h4>
+                        <p>دروس في المؤسسة مع أساتذة مختصين في مجموعات صغيرة لضمان جودة التعليم</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h4>منصة رقمية</h4>
+                        <p>دروس مسجلة ومباشرة عبر الإنترنت مع تمارين تفاعلية وتصحيح فوري</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h4>دعم فردي</h4>
+                        <p>متابعة شخصية لكل تلميذ مع خطط تعليمية مخصصة حسب احتياجاته</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="250">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h4>نتائج مضمونة</h4>
+                        <p>تحسن ملحوظ في المستوى الدراسي مع ضمان استرجاع المبلغ إذا لم تكن راضياً</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <h4>مرونة كاملة</h4>
+                        <p>حضوري أو عن بعد حسب ظروفك، مع إمكانية التبديل بين النظامين</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h4>ضمان الجودة</h4>
+                        <p>إشراف إدارة ومفتشين مختصين لضمان أعلى مستويات الجودة التعليمية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">المراحل الدراسية</span>
+                <h2 class="section-title">نغطي جميع المستويات</h2>
+                <p class="section-description">اختر المرحلة التي تناسبك وابدأ رحلة التعلم</p>
+            </div>
+            
+            <div class="row g-3">
+                <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="100">
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-child"></i>
+                        </div>
+                        <h4>الطور الابتدائي</h4>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="150">
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h4>الطور المتوسط</h4>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="200">
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <h4>الطور الثانوي</h4>
+                    </a>
+                </div>
+                <div class="col-lg-3 col-md-4 col-6" data-aos="zoom-in" data-aos-delay="250">
+                    <a href="#" class="category-card">
+                        <div class="category-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h4>تحضير البكالوريا</h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">الباقات والأسعار</span>
+                <h2 class="section-title">اختر الباقة المناسبة</h2>
+                <p class="section-description">أسعار تنافسية تناسب الجميع مع عروض خاصة للتسجيل المبكر</p>
+            </div>
+            
+            <div class="row g-4 align-items-center">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <h3>الطور الابتدائي</h3>
+                            <div class="pricing-price">
+                                1000 <span>دج/شهر</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 4 حصص أسبوعياً</li>
+                            <li><i class="fas fa-check"></i> متابعة فردية</li>
+                            <li><i class="fas fa-check"></i> منصة رقمية</li>
+                            <li><i class="fas fa-check"></i> تقارير دورية</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary">اختر الباقة</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">الأكثر طلباً</div>
+                        <div class="pricing-header">
+                            <div class="pricing-icon">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <h3>الطور المتوسط</h3>
+                            <div class="pricing-price">
+                                2000 <span>دج/شهر</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 6 حصص أسبوعياً</li>
+                            <li><i class="fas fa-check"></i> متابعة فردية مكثفة</li>
+                            <li><i class="fas fa-check"></i> منصة رقمية متكاملة</li>
+                            <li><i class="fas fa-check"></i> تقارير أسبوعية</li>
+                            <li><i class="fas fa-check"></i> جلسات دعم إضافية</li>
+                        </ul>
+                        <a href="#" class="btn btn-primary">اختر الباقة</a>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="pricing-card">
+                        <div class="pricing-header">
+                            <div class="pricing-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>الطور الثانوي</h3>
+                            <div class="pricing-price">
+                                3000 <span>دج/شهر</span>
+                            </div>
+                        </div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> 8 حصص أسبوعياً</li>
+                            <li><i class="fas fa-check"></i> متابعة فردية مخصصة</li>
+                            <li><i class="fas fa-check"></i> منصة رقمية متقدمة</li>
+                            <li><i class="fas fa-check"></i> تقارير تفصيلية</li>
+                            <li><i class="fas fa-check"></i> نماذج امتحانات</li>
+                            <li><i class="fas fa-check"></i> تحضير مكثف</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary">اختر الباقة</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="bg-white">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">آراء الأولياء</span>
+                <h2 class="section-title">ماذا يقولون عنا؟</h2>
+                <p class="section-description">ثقتكم هي سر نجاحنا</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>أحمد بن علي</h4>
+                                <p>ولي تلميذ في المتوسط</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "منذ التحاق ابني بمؤسسة الأمل، تحسن مستواه الدراسي بشكل كبير. المتابعة الفردية والمنصة الرقمية ساعدته كثيراً."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>فاطمة الزهراء</h4>
+                                <p>ولية تلميذة في الابتدائي</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "أشكر القائمين على مؤسسة الأمل على جهودهم. ابنتي أصبحت تحب الدراسة بفضل طريقة التدريس الممتعة."
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-card">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="testimonial-info">
+                                <h4>محمد أمين</h4>
+                                <p>ولي تلميذ في الثانوي</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "المنصة الرقمية ساعدت ابني على متابعة الدروس حتى عند غيابه. النتائج كانت مذهلة في امتحانات الفصل."
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section>
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-subtitle">الأسئلة الشائعة</span>
+                <h2 class="section-title">أكثر الأسئلة تكراراً</h2>
+                <p class="section-description">نجيب عن كل استفساراتكم</p>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item" data-aos="fade-up">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                    ما هي مؤسسة الأمل للدعم المدرسي؟
+                                </button>
+                            </h2>
+                            <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    مؤسسة الأمل هي منصة تعليمية متكاملة تجمع بين الدعم المدرسي الحضوري والتعليم الرقمي. نوفر دروساً خصوصية لجميع المراحل (ابتدائي، متوسط، ثانوي) مع متابعة فردية ونتائج مضمونة. لدينا أساتذة مختصون ومنصة رقمية تفاعلية تتيح للتلاميذ متابعة الدروس في أي وقت ومن أي مكان.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                    كيف يمكنني التسجيل في المؤسسة؟
+                                </button>
+                            </h2>
+                            <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    يمكنك التسجيل عبر الموقع الإلكتروني بسهولة، أو زيارة المؤسسة مباشرة. كل ما عليك هو اختيار المرحلة الدراسية والمواد التي ترغب في دعمها، ثم تعبئة استمارة التسجيل. فريقنا سيتواصل معك لتأكيد التسجيل وتقديم كل المعلومات اللازمة.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                    ما الفرق بين التعليم الحضوري والرقمي؟
+                                </button>
+                            </h2>
+                            <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    التعليم الحضوري يتم في مقر المؤسسة مع أساتذة مباشرة، في مجموعات صغيرة لا تتجاوز 10 تلاميذ لضمان جودة التعليم. أما التعليم الرقمي فيتم عبر منصتنا الإلكترونية، حيث يمكن للتلميذ متابعة الدروس المسجلة والمباشرة، حل التمارين التفاعلية، والتواصل مع الأستاذ عبر الدردشة. يمكنك الاختيار بين النظامين أو الجمع بينهما حسب رغبتك.
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                    كيف نضمن تحسن مستوى التلميذ؟
+                                </button>
+                            </h2>
+                            <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    نضمن تحسن المستوى من خلال: (1) تشخيص دقيق لمستوى التلميذ في البداية، (2) وضع خطة تعليمية مخصصة، (3) متابعة فردية مع أستاذ مختص، (4) تقارير دورية للأولياء، (5) تمارين تفاعلية وتقييمات مستمرة، (6) إمكانية التواصل المباشر مع الأساتذة. نسبة رضا الأولياء عن نتائج أبنائهم تصل إلى 98%.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 data-aos="fade-up">ابدأ رحلة النجاح مع مؤسسة الأمل</h2>
+            <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">سجل الآن واستفد من عروض التسجيل المبكر</p>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <a href="#" class="btn btn-cta-primary">سجل الآن</a>
+                <a href="#" class="btn btn-cta-outline">تواصل معنا</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://via.placeholder.com/150x40/FFFFFF/6C5CE7?text=مؤسسة+الأمل" alt="مؤسسة الأمل" class="mb-3">
+                    <p>مؤسسة الأمل للدعم المدرسي - التعليم الحضوري والرقمي في مكان واحد. نضمن لأبنائكم متابعة فردية ونتائج متميزة مع نخبة من الأساتذة المختصين.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4>روابط سريعة</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">الرئيسية</a></li>
+                        <li><a href="#">عن المؤسسة</a></li>
+                        <li><a href="#">مميزاتنا</a></li>
+                        <li><a href="#">الباقات</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4>المراحل</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">الطور الابتدائي</a></li>
+                        <li><a href="#">الطور المتوسط</a></li>
+                        <li><a href="#">الطور الثانوي</a></li>
+                        <li><a href="#">تحضير البكالوريا</a></li>
+                        <li><a href="#">دورات عن بعد</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4>معلومات الاتصال</h4>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt ms-2"></i> الجزائر - تندوف</li>
+                        <li><i class="fas fa-phone ms-2"></i> 0550 12 34 56</li>
+                        <li><i class="fas fa-envelope ms-2"></i> contact@alamel.dz</li>
+                    </ul>
+                    
+                    <h4 class="mt-4">وسائل الدفع</h4>
+                    <div class="payment-methods">
+                        <span class="payment-method">CCP</span>
+                        <span class="payment-method">Baridimob</span>
+                        <span class="payment-method">EDAHABIA</span>
+                        <span class="payment-method">فيزا</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2026 مؤسسة الأمل للدعم المدرسي | تصميم وتطوير بإبداع</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Scroll Down Button
+        document.getElementById('scrollDown')?.addEventListener('click', function() {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.hsoub-header');
+            if (window.scrollY > 100) {
+                header.style.background = 'linear-gradient(135deg, #4A3B9F 0%, #6C5CE7 100%)';
+            } else {
+                header.style.background = 'var(--gradient-primary)';
+            }
+        });
+    </script>
+</body>
+</html>

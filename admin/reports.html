@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التقارير - مؤسسة الأمل</title>
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="../index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="../logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="settings.html">
+                        <i class="fas fa-user"></i>
+                        <span>المشرف</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Dashboard Section -->
+    <section class="alamel-dashboard">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="alamel-dashboard-sidebar">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-user-tie"></i>
+                            </div>
+                            <h3 class="user-name">إدارة المؤسسة</h3>
+                            <span class="user-level">مدير النظام</span>
+                        </div>
+                        
+                        <ul class="alamel-dashboard-menu">
+                            <li><a href="admin-dashboard.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                            <li><a href="manage-students.html"><i class="fas fa-user-graduate"></i> إدارة الطلاب</a></li>
+                            <li><a href="manage-teachers.html"><i class="fas fa-chalkboard-teacher"></i> إدارة الأساتذة</a></li>
+                            <li><a href="admin-manage-courses.html"><i class="fas fa-book"></i> إدارة الدورات</a></li>
+                            <li><a href="manage-subscriptions.html"><i class="fas fa-credit-card"></i> إدارة الاشتراكات</a></li>
+                            <li><a href="manage-payments.html"><i class="fas fa-money-bill"></i> المدفوعات</a></li>
+                            <li><a href="reports.html" class="active"><i class="fas fa-chart-line"></i> التقارير</a></li>
+                            <li><a href="settings.html"><i class="fas fa-cog"></i> الإعدادات</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                <div class="col-lg-9">
+                    <div class="alamel-dashboard-main">
+                        <!-- Header -->
+                        <div class="alamel-dashboard-header">
+                            <h1 class="alamel-dashboard-title">التقارير والإحصائيات</h1>
+                            <div class="d-flex gap-2">
+                                <select class="alamel-filter-select" style="width: 150px;">
+                                    <option>آخر 30 يوم</option>
+                                    <option>آخر 90 يوم</option>
+                                    <option>آخر 12 شهر</option>
+                                </select>
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-download"></i> تصدير
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Report Cards -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-3 col-6">
+                                <div class="alamel-report-card">
+                                    <div class="alamel-report-icon">
+                                        <i class="fas fa-user-graduate"></i>
+                                    </div>
+                                    <div class="alamel-report-title">الطلاب الجدد</div>
+                                    <div class="alamel-report-value">+124</div>
+                                    <a href="#" class="alamel-report-link">
+                                        عرض التفاصيل <i class="fas fa-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6">
+                                <div class="alamel-report-card">
+                                    <div class="alamel-report-icon" style="background: var(--gradient-secondary);">
+                                        <i class="fas fa-chalkboard-teacher"></i>
+                                    </div>
+                                    <div class="alamel-report-title">الأساتذة الجدد</div>
+                                    <div class="alamel-report-value">+8</div>
+                                    <a href="#" class="alamel-report-link">
+                                        عرض التفاصيل <i class="fas fa-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6">
+                                <div class="alamel-report-card">
+                                    <div class="alamel-report-icon" style="background: linear-gradient(135deg, #E67E22, #F39C12);">
+                                        <i class="fas fa-credit-card"></i>
+                                    </div>
+                                    <div class="alamel-report-title">اشتراكات جديدة</div>
+                                    <div class="alamel-report-value">+98</div>
+                                    <a href="#" class="alamel-report-link">
+                                        عرض التفاصيل <i class="fas fa-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-3 col-6">
+                                <div class="alamel-report-card">
+                                    <div class="alamel-report-icon" style="background: linear-gradient(135deg, #27AE60, #2ECC71);">
+                                        <i class="fas fa-money-bill-wave"></i>
+                                    </div>
+                                    <div class="alamel-report-title">الإيرادات</div>
+                                    <div class="alamel-report-value">892K</div>
+                                    <a href="#" class="alamel-report-link">
+                                        عرض التفاصيل <i class="fas fa-arrow-left"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Charts Row -->
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="alamel-chart-card">
+                                    <div class="alamel-chart-header">
+                                        <h3 class="alamel-chart-title">نمو الإيرادات</h3>
+                                        <div class="alamel-chart-period">
+                                            <button class="btn btn-sm btn-primary">شهري</button>
+                                            <button class="btn btn-sm btn-outline-primary">سنوي</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Static Revenue Chart -->
+                                    <div class="alamel-static-chart">
+                                        <div class="alamel-chart-placeholder">
+                                            <div class="alamel-chart-grid"></div>
+                                            
+                                            <div class="alamel-growth-line" style="height: 120px;">
+                                                <svg viewBox="0 0 400 120" preserveAspectRatio="none">
+                                                    <!-- Revenue Line -->
+                                                    <path d="M 30,100 L 90,80 L 150,60 L 210,40 L 270,30 L 330,20 L 380,15" 
+                                                          stroke="#1A4B7A" stroke-width="3" fill="none"/>
+                                                    
+                                                    <!-- Data Points -->
+                                                    <circle cx="30" cy="100" r="4" fill="#1A4B7A"/>
+                                                    <circle cx="90" cy="80" r="4" fill="#1A4B7A"/>
+                                                    <circle cx="150" cy="60" r="4" fill="#1A4B7A"/>
+                                                    <circle cx="210" cy="40" r="4" fill="#1A4B7A"/>
+                                                    <circle cx="270" cy="30" r="4" fill="#1A4B7A"/>
+                                                    <circle cx="330" cy="20" r="4" fill="#1A4B7A"/>
+                                                    <circle cx="380" cy="15" r="4" fill="#1A4B7A"/>
+                                                </svg>
+                                            </div>
+                                            
+                                            <!-- X-Axis Labels -->
+                                            <div class="alamel-chart-labels">
+                                                <span>سبتمبر</span>
+                                                <span>أكتوبر</span>
+                                                <span>نوفمبر</span>
+                                                <span>ديسمبر</span>
+                                                <span>يناير</span>
+                                                <span>فبراير</span>
+                                                <span>مارس</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-6">
+                                <div class="alamel-chart-card">
+                                    <div class="alamel-chart-header">
+                                        <h3 class="alamel-chart-title">توزيع الاشتراكات</h3>
+                                    </div>
+                                    
+                                    <!-- Static Donut Chart -->
+                                    <div class="alamel-donut-container">
+                                        <div class="alamel-donut-chart">
+                                            <svg viewBox="0 0 220 220">
+                                                <!-- Background circle -->
+                                                <circle cx="110" cy="110" r="85" class="alamel-donut-bg" stroke="#e9ecef"/>
+                                                
+                                                <!-- الباقة الماسية (45%) -->
+                                                <circle cx="110" cy="110" r="85" class="alamel-donut-segment students" 
+                                                        stroke-dasharray="241 534"/>
+                                                
+                                                <!-- الباقة الذهبية (35%) -->
+                                                <circle cx="110" cy="110" r="85" class="alamel-donut-segment teachers" 
+                                                        stroke-dasharray="187 534" stroke-dashoffset="-241"/>
+                                                
+                                                <!-- الباقة الفضية (20%) -->
+                                                <circle cx="110" cy="110" r="85" class="alamel-donut-segment admins" 
+                                                        stroke-dasharray="107 534" stroke-dashoffset="-428"/>
+                                            </svg>
+                                            
+                                            <div class="alamel-donut-center">
+                                                <div class="alamel-donut-total">892</div>
+                                                <div class="alamel-donut-label">اشتراك</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Legend -->
+                                    <div class="alamel-chart-legend">
+                                        <div class="alamel-legend-item">
+                                            <div class="alamel-legend-color students"></div>
+                                            <span>الماسية (450)</span>
+                                        </div>
+                                        <div class="alamel-legend-item">
+                                            <div class="alamel-legend-color teachers"></div>
+                                            <span>الذهبية (320)</span>
+                                        </div>
+                                        <div class="alamel-legend-item">
+                                            <div class="alamel-legend-color admins"></div>
+                                            <span>الفضية (122)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Reports Table -->
+                        <div class="alamel-admin-card">
+                            <h4 class="mb-4">تقرير الأداء الشهري</h4>
+                            <div class="table-responsive">
+                                <table class="alamel-admin-table">
+                                    <thead>
+                                        <tr>
+                                            <th>الشهر</th>
+                                            <th>الطلاب الجدد</th>
+                                            <th>الأساتذة الجدد</th>
+                                            <th>الاشتراكات</th>
+                                            <th>الإيرادات</th>
+                                            <th>نسبة النمو</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>يناير 2026</td>
+                                            <td>98</td>
+                                            <td>4</td>
+                                            <td>85</td>
+                                            <td>765,000 دج</td>
+                                            <td><span class="text-success">+12%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>فبراير 2026</td>
+                                            <td>124</td>
+                                            <td>5</td>
+                                            <td>98</td>
+                                            <td>892,000 دج</td>
+                                            <td><span class="text-success">+16%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>ديسمبر 2025</td>
+                                            <td>87</td>
+                                            <td>3</td>
+                                            <td>72</td>
+                                            <td>650,000 دج</td>
+                                            <td><span class="text-success">+8%</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td>نوفمبر 2025</td>
+                                            <td>76</td>
+                                            <td>2</td>
+                                            <td>68</td>
+                                            <td>580,000 دج</td>
+                                            <td><span class="text-success">+5%</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                            <!-- Pagination -->
+                            <nav class="mt-4">
+                                <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled"><a class="page-link" href="#">السابق</a></li>
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">التالي</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init();
+        
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.alamel-header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = '#0D2F4F';
+            } else {
+                header.style.backgroundColor = '#1A4B7A';
+            }
+        });
+    </script>
+</body>
+</html>

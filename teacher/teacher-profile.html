@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي - مؤسسة الأمل</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="../index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="../logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="#">
+                        <i class="fas fa-bell"></i>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="teacher-profile.html">
+                        <i class="fas fa-user"></i>
+                        <span>أ. محمد</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <section class="alamel-dashboard">
+        <div class="container">
+            <div class="row">
+                <!-- Sidebar -->
+                <div class="col-lg-3">
+                    <div class="alamel-dashboard-sidebar">
+                        <div class="user-info">
+                            <div class="user-avatar">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                            </div>
+                            <h3 class="user-name">محمد عبدالله</h3>
+                            <span class="user-level">أستاذ الرياضيات</span>
+                        </div>
+                        
+                        <ul class="alamel-dashboard-menu">
+                            <li><a href="teacher-dashboard.html"><i class="fas fa-home"></i> الرئيسية</a></li>
+                            <li><a href="teacher-profile.html" class="active"><i class="fas fa-user"></i> الملف الشخصي</a></li>
+                            <li><a href="manage-courses.html"><i class="fas fa-book"></i> إدارة الدورات</a></li>
+                            <li><a href="upload-lesson.html"><i class="fas fa-upload"></i> رفع درس</a></li>
+                            <li><a href="create-quiz.html"><i class="fas fa-question-circle"></i> إنشاء اختبار</a></li>
+                            <li><a href="student-list.html"><i class="fas fa-users"></i> قائمة الطلاب</a></li>
+                            <li><a href="teacher-messages.html"><i class="fas fa-envelope"></i> الرسائل</a></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Main Content -->
+                
+                <div class="col-lg-9">
+                    <div class="alamel-dashboard-main">
+                        <div class="alamel-dashboard-header">
+                            <h1 class="alamel-dashboard-title">الملف الشخصي</h1>
+                        </div>
+                        
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">الاسم الأول</label>
+                                        <input type="text" class="alamel-form-control" value="محمد">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">الاسم الأخير</label>
+                                        <input type="text" class="alamel-form-control" value="عبدالله">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">البريد الإلكتروني</label>
+                                        <input type="email" class="alamel-form-control" value="mohamed@alamel.dz">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">رقم الهاتف</label>
+                                        <input type="tel" class="alamel-form-control" value="+213 000 000 000">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">التخصص</label>
+                                        <input type="text" class="alamel-form-control" value="الرياضيات">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">سنوات الخبرة</label>
+                                        <input type="text" class="alamel-form-control" value="8 سنوات">
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="alamel-form-group">
+                                        <label class="alamel-form-label">السيرة الذاتية</label>
+                                        <textarea class="alamel-form-control" rows="5">أستاذ رياضيات خبرة 8 سنوات في تدريس المراحل المتوسطة والثانوية...</textarea>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="alamel-form-btn">حفظ التغييرات</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

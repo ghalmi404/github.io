@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول - مؤسسة الأمل للدعم المدرسي</title>
+    
+    <!-- Bootstrap 5 RTL CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="alamel-header">
+        <div class="alamel-container">
+            <a href="index.html" class="alamel-logo">
+                <img class="alamel-logo-img" src="logo/logo1.jpg" alt="">
+                <span>مؤسسة الأمل</span>
+            </a>
+            <ul class="alamel-nav alamel-nav-left">
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="contact.html">
+                        <i class="fas fa-envelope"></i>
+                        <span>اتصل بنا</span>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link" href="login.html">
+                        <i class="fas fa-sign-in-alt"></i>
+                        <span>دخول</span>
+                    </a>
+                </li>
+                <li class="alamel-nav-item">
+                    <a class="alamel-nav-link alamel-btn-outline" href="register.html">
+                        <i class="fas fa-user-plus"></i>
+                        <span>حساب جديد</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Login Form Section -->
+    <section class="alamel-form-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-6 col-lg-5">
+                    <div class="alamel-form-card" data-aos="fade-up">
+                        <div class="alamel-form-header">
+                            <h2 class="alamel-form-title">تسجيل الدخول</h2>
+                            <p class="alamel-form-subtitle">مرحباً بعودتك! أدخل بياناتك للدخول</p>
+                        </div>
+                        
+                        <form onsubmit="event.preventDefault(); window.location.href='choose-role.html';">
+                            <div class="alamel-form-group">
+                                <label class="alamel-form-label">البريد الإلكتروني</label>
+                                <input type="email" class="alamel-form-control" placeholder="أدخل بريدك الإلكتروني">
+                            </div>
+                            
+                            <div class="alamel-form-group">
+                                <label class="alamel-form-label">كلمة المرور</label>
+                                <input type="password" class="alamel-form-control" placeholder="أدخل كلمة المرور">
+                            </div>
+                            
+                            <div class="alamel-form-check">
+                                <input type="checkbox" class="alamel-form-check-input" id="remember">
+                                <label class="alamel-form-check-label" for="remember">
+                                    تذكرني
+                                </label>
+                                <a href="forgot-password.html" class="me-auto" style="color: var(--primary-color); text-decoration: none; font-size: 0.95rem;">
+                                    نسيت كلمة المرور؟
+                                </a>
+                            </div>
+                            
+                            <button type="submit" class="alamel-form-btn">تسجيل الدخول</button>
+                        </form>
+                        <div class="alamel-form-footer">
+                            ليس لديك حساب؟
+                            <a href="register.html">إنشاء حساب جديد</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="alamel-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <img src="https://via.placeholder.com/150x40/FFFFFF/1A4B7A?text=مؤسسة+الأمل" alt="مؤسسة الأمل" class="mb-3">
+                    <p>مؤسسة الأمل للدعم المدرسي - ثقة وأمان منذ 2026. نضع مستقبل أبنائكم في قلب اهتماماتنا.</p>
+                    <div class="alamel-social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4>روابط سريعة</h4>
+                    <ul class="alamel-footer-links">
+                        <li><a href="index.html">الرئيسية</a></li>
+                        <li><a href="#">عن المؤسسة</a></li>
+                        <li><a href="#">لماذا نحن</a></li>
+                        <li><a href="#">الباقات</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4>المراحل</h4>
+                    <ul class="alamel-footer-links">
+                        <li><a href="#">الطور الابتدائي</a></li>
+                        <li><a href="#">الطور المتوسط</a></li>
+                        <li><a href="#">الطور الثانوي</a></li>
+                        <li><a href="#">تحضير البكالوريا</a></li>
+                        <li><a href="#">دورات عن بعد</a></li>
+                    </ul>
+                </div>
+                
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <h4>معلومات الاتصال</h4>
+                    <ul class="alamel-footer-links">
+                        <li><i class="fas fa-map-marker-alt ms-2"></i> الجزائر - تندوف</li>
+                        <li><i class="fas fa-phone ms-2"></i>+213 000 000 000</li>
+                        <li><i class="fas fa-envelope ms-2"></i> contact@alamel.dz</li>
+                    </ul>
+                    
+                    <h4 class="mt-4">وسائل الدفع الآمنة</h4>
+                    <div class="alamel-payment-methods">
+                        <span class="alamel-payment-method">CCP</span>
+                        <span class="alamel-payment-method">Baridimob</span>
+                        <span class="alamel-payment-method">EDAHABIA</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="alamel-footer-bottom">
+                <p>جميع الحقوق محفوظة &copy; 2026 مؤسسة الأمل للدعم المدرسي - ثقتكم أمانة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('.alamel-header');
+            if (window.scrollY > 100) {
+                header.style.backgroundColor = '#0D2F4F';
+            } else {
+                header.style.backgroundColor = '#1A4B7A';
+            }
+        });
+    </script>
+</body>
+</html>
