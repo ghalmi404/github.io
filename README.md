@@ -215,7 +215,7 @@ This project is a **graduation thesis project for a Bachelor's degree (Licence)*
 This project is created for **academic purposes** as part of a graduation thesis. It is intended to be submitted for **startup project competitions** in accordance with Algerian law.
 
 ```
-Copyright (c) 2025-2026 Ghalmi404
+Copyright (c) 2025-2026 Ghalmi
 
 This project is developed as an academic work and is protected under Algerian copyright law. 
 It may be used for educational and startup competition purposes according to Decree 1275.
