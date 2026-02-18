@@ -150,15 +150,15 @@ cd github.io
 
 ### 🟢 Student Dashboard
 - **Path:** `student/student-dashboard.html`
-- **Live:** [student dashboard](https://ghalmi404.github.io/github.io/student/student-dashboard.html)
+- **Live:** [Student Dashboard](https://ghalmi404.github.io/github.io/student/student-dashboard.html)
 
 ### 🔵 Teacher Dashboard
 - **Path:** `teacher/teacher-dashboard.html`
-- **Live:** [teacher dashboard](https://ghalmi404.github.io/github.io/teacher/teacher-dashboard.html)
+- **Live:** [Teacher Dashboard](https://ghalmi404.github.io/github.io/teacher/teacher-dashboard.html)
 
 ### 🔴 Admin Dashboard
 - **Path:** `admin/admin-dashboard.html`
-- **Live:** [admin dashboard](https://ghalmi404.github.io/github.io/admin/admin-dashboard.html)
+- **Live:** [Admin Dashboard](https://ghalmi404.github.io/github.io/admin/admin-dashboard.html)
 
 ## 🤝 Contributing
 
@@ -182,6 +182,7 @@ We welcome contributions! To contribute:
 This project is a **graduation thesis project for a Bachelor's degree (Licence)** and is eligible to participate as a **Startup project** in accordance with Algerian **Joint Ministerial Decree No. 1275** of September 27, 2022, which defines the procedures for granting the status of a startup or innovative project.
 
 ### 📌 **Project Academic Information:**
+
 | | |
 |---|---|
 | **Project Type** | Graduation Thesis (Licence Level) |
@@ -214,7 +215,7 @@ This project is a **graduation thesis project for a Bachelor's degree (Licence)*
 This project is created for **academic purposes** as part of a graduation thesis. It is intended to be submitted for **startup project competitions** in accordance with Algerian law.
 
 ```
-Copyright (c) 2025-2026 [Your Name]
+Copyright (c) 2025-2026 Ghalmi404
 
 This project is developed as an academic work and is protected under Algerian copyright law. 
 It may be used for educational and startup competition purposes according to Decree 1275.
