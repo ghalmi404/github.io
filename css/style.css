@@ -219,6 +219,39 @@ a {
 .alamel-btn-outline:hover i {
     color: var(--primary-color) !important;
 }
+/* ===== Logout Button ===== */
+.alamel-logout-btn {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+    cursor: pointer;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.alamel-logout-btn:hover {
+    background-color: white;
+    color: var(--primary-color);
+    border-color: white;
+}
+
+.alamel-logout-btn:hover i {
+    color: var(--primary-color);
+}
+
+.alamel-logout-btn i {
+    font-size: 14px;
+    color: white;
+    transition: var(--transition);
+}
 
 /* ======================================== */
 /* ===== 4. Hero Section (البطل) ===== */
@@ -2819,6 +2852,19 @@ input:checked + .alamel-settings-slider:before {
     /* Settings */
     .alamel-settings-grid {
         grid-template-columns: 1fr;
+    }
+    .alamel-logout-btn span {
+        display: none;
+    }
+    
+    .alamel-logout-btn {
+        padding: 6px 10px;
+        margin-right: 5px;
+    }
+    
+    .alamel-logout-btn i {
+        font-size: 1.2rem;
+        margin: 0;
     }
 }
 
