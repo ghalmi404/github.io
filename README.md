@@ -1,6 +1,6 @@
 # Al-Amal School Support Institution 🏫📚
 
-![Al-Amal Institution](https://via.placeholder.com/1200x300/1A4B7A/FFFFFF?text=Al-Amal+School+Support+Institution)
+![Al-Amal Institution](https://ghalmi404.github.io/github.io/index.html)
 
 ## 📋 Overview
 An integrated educational platform that combines **in-person and digital education** in one place, aimed at providing exceptional academic support for students at all educational levels with individual follow-up and guaranteed results.
