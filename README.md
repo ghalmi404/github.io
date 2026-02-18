@@ -149,16 +149,16 @@ cd github.io
 ## 👥 User Roles
 
 ### 🟢 Student Dashboard
-- **Path:** `Student/student-dashboard.html`
-- **Live:** [Student Dashboard](https://ghalmi404.github.io/github.io/student/student-dashboard.html)
+- **Path:** `student/student-dashboard.html`
+- **Live:** [student dashboard](https://ghalmi404.github.io/github.io/student/student-dashboard.html)
 
 ### 🔵 Teacher Dashboard
-- **Path:** `Teacher/teacher-dashboard.html`
-- **Live:** [Teacher Dashboard](https://ghalmi404.github.io/github.io/teacher/teacher-dashboard.html)
+- **Path:** `teacher/teacher-dashboard.html`
+- **Live:** [teacher dashboard](https://ghalmi404.github.io/github.io/teacher/teacher-dashboard.html)
 
 ### 🔴 Admin Dashboard
-- **Path:** `Admin/admin-dashboard.html`
-- **Live:** [Admin Dashboard](https://ghalmi404.github.io/github.io/admin/admin-dashboard.html)
+- **Path:** `admin/admin-dashboard.html`
+- **Live:** [admin dashboard](https://ghalmi404.github.io/github.io/admin/admin-dashboard.html)
 
 ## 🤝 Contributing
 
